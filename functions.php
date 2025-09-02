@@ -78,3 +78,5 @@ add_filter('nav_menu_link_attributes', function ($atts, $item, $args, $depth) {
     }
     return $atts;
 }, 10, 4);
+
+function enable_svg_upload( $mime_types=array() ){ $mime_types['svg'] = 'image/svg+xml'; return $mime_types; } add_filter('upload_mimes', 'enable_svg_upload' );
