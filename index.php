@@ -1,4 +1,5 @@
-<h1> Minuto De Accion </h1>
+<?php get_header() ?>
+
 <p>something wong?</p>
 <?php 
     while(have_posts()) {
