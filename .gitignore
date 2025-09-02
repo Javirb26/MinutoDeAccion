@@ -1,0 +1,17 @@
+# OS / editors
+.DS_Store
+*.log
+.vscode/
+.idea/
+
+# Node / build
+node_modules/
+assets/css/*.map
+dist/
+.cache/
+
+# Env
+.env
+
+# Composer (if you use it)
+vendor/

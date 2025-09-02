@@ -1,0 +1,19 @@
+{
+  "name": "minuto-de-accion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./assets/tailwind.css -o ./assets/css/main.css --watch",
+    "build": "tailwindcss -i ./assets/tailwind.css -o ./assets/css/main.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwind": "^4.0.0"
+  }
+}

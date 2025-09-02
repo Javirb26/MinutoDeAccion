@@ -1,0 +1,17 @@
+/* 
+
+Theme Name: Minuto De Accion
+
+*/
+
+.main-nav{
+    display: flex;
+    list-style-type: none;
+    column-gap: 20px;
+    justify-content: end;
+}
+.main-nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
