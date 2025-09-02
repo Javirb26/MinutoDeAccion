@@ -69,11 +69,11 @@ add_filter('nav_menu_css_class', function ($classes, $item, $args, $depth) {
 // Add classes to <a>
 add_filter('nav_menu_link_attributes', function ($atts, $item, $args, $depth) {
     if (($args->theme_location ?? null) === 'primary') {
-        $base = 'block px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 focus:outline-none focus:ring';
+        $base = 'block px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 focus:outline-none focus:ring text-[#52684f] ';
         $atts['class'] = trim(($atts['class'] ?? '') . ' ' . $base);
         // Optional: accessible current-page style
         if (!empty($atts['aria-current'])) {
-            $atts['class'] .= ' bg-gray-100';
+            $atts['class'] .= 'bg-gray-100';
         }
     }
     return $atts;
