@@ -60,7 +60,7 @@ add_filter('nav_menu_css_class', function ($classes, $item, $args, $depth) {
         $classes[] = 'relative group'; // e.g., for dropdown hovers later
         // Optional “active” styling based on WP classes:
         if (in_array('current-menu-item', $classes, true) || in_array('current-menu-ancestor', $classes, true)) {
-            $classes[] = 'text-blue-600';
+            $classes[] = 'text-[#52684f]';
         }
     }
     return $classes;
@@ -69,7 +69,7 @@ add_filter('nav_menu_css_class', function ($classes, $item, $args, $depth) {
 // Add classes to <a>
 add_filter('nav_menu_link_attributes', function ($atts, $item, $args, $depth) {
     if (($args->theme_location ?? null) === 'primary') {
-        $base = 'block px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 focus:outline-none focus:ring text-[#52684f] ';
+        $base = 'block px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 focus:outline-none focus:ring text-black ';
         $atts['class'] = trim(($atts['class'] ?? '') . ' ' . $base);
         // Optional: accessible current-page style
         if (!empty($atts['aria-current'])) {

@@ -46,7 +46,7 @@ wp_nav_menu([
         wp_nav_menu([
             'theme_location' => 'primary',
             'container'      => false,
-            'menu_class'     => 'absolute left-[20%] main-mobile-nav hidden h-screen z-20 bg-slate-100 w-[80%]',
+            'menu_class'     => 'pt-6 flex flex-col gap-y-7 absolute left-[50%] main-mobile-nav hidden h-screen z-20 bg-slate-100 w-[50%]',
             'fallback_cb'    => false, // don’t fall back to a pages list
         ]);
         ?>
