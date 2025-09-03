@@ -3,6 +3,9 @@
 Theme Name: Minuto De Accion
 
 */
+:root {
+    --olive: #52684f;
+}
 
 .main-nav{
     display: flex;
@@ -12,6 +15,15 @@ Theme Name: Minuto De Accion
 }
 .main-nav a {
     text-decoration: none;
-    color: black;
     font-size: 18px;
 }
+
+.main-mobile-nav a {
+ font-size: 35px;
+font-weight: bold;
+}
+
+.custom-logo {
+    max-width: 70px;
+}
+

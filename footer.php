@@ -1,4 +1,4 @@
-<p> footer content</p>
+<footer>footer content</footer>
 
 <?php wp_footer() ?>
 </body>
