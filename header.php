@@ -11,13 +11,15 @@
 <!-- Desktop Navigation -->
 <nav id="desktopNav" class="hidden md:block">
     <div class="flex items-center justify-between p-4 border-black border-b">
-        <div class="flex items-center gap-x-5"> 
-            <?php
-                if ( function_exists( 'the_custom_logo' ) ) {
-                    the_custom_logo();
-                }
-            ?>
-            <h2 class="text-[var(--olive)] text-2xl font-medium">Minuto De Accion</h2>
+        <div class="flex items-center"> 
+                <a href="/" class="">
+                    <?php
+                        if ( function_exists( 'the_custom_logo' ) ) {
+                            the_custom_logo();
+                        }
+                    ?>
+                </a>
+                <a class="text-[var(--olive)] text-2xl font-medium ml-5" href="/">Minuto De Accion</a>
         </div>
         <div>
             <?php
@@ -35,13 +37,15 @@
 <!-- Mobile navigation -->
 <nav id="mobileNav" class="block md:hidden">
     <div class="flex items-center justify-between border-black border-b h-20 px-5">
-        <div class="flex items-center gap-x-5"> 
-            <?php
-                if ( function_exists( 'the_custom_logo' ) ) {
-                    the_custom_logo();
-                }
-            ?>
-            <h2 class="text-[var(--olive)] text-2xl font-medium">Minuto De Accion</h2>
+        <div class="flex items-center"> 
+                <a href="/" class="">
+                    <?php
+                        if ( function_exists( 'the_custom_logo' ) ) {
+                            the_custom_logo();
+                        }
+                    ?>
+                </a>
+                <a class="text-[var(--olive)] text-2xl font-medium ml-5" href="/">Minuto De Accion</a>
         </div>
         <div class="flex justify-end">
             <!-- Hamburger Menu -->
