@@ -10,22 +10,39 @@
     
 <!-- Desktop Navigation -->
 <nav id="desktopNav" class="hidden md:block">
-
-<?php
-wp_nav_menu([
-    'theme_location' => 'primary',
-    'container'      => false,
-    'menu_class'     => 'main-nav',
-    'fallback_cb'    => false, // don’t fall back to a pages list
-]);
-?>
-
+    <div class="flex items-center justify-between p-4 border-black border-b">
+        <div class="flex items-center gap-x-5"> 
+            <?php
+                if ( function_exists( 'the_custom_logo' ) ) {
+                    the_custom_logo();
+                }
+            ?>
+            <h2 class="text-[var(--olive)] text-2xl font-medium">Minuto De Accion</h2>
+        </div>
+        <div>
+            <?php
+            wp_nav_menu([
+                'theme_location' => 'primary',
+                'container'      => false,
+                'menu_class'     => 'main-nav',
+                'fallback_cb'    => false, // don’t fall back to a pages list
+            ]);
+            ?>
+        </div>
+    </div>
 </nav>
 
 <!-- Mobile navigation -->
 <nav id="mobileNav" class="block md:hidden">
-    <div class="flex items-center justify-between border-black border-b h-12 px-5">
-        <div><h1>logo</h1></div>
+    <div class="flex items-center justify-between border-black border-b h-20 px-5">
+        <div class="flex items-center gap-x-5"> 
+            <?php
+                if ( function_exists( 'the_custom_logo' ) ) {
+                    the_custom_logo();
+                }
+            ?>
+            <h2 class="text-[var(--olive)] text-2xl font-medium">Minuto De Accion</h2>
+        </div>
         <div class="flex justify-end">
             <!-- Hamburger Menu -->
             <button onclick="toggleMenu()" id="open" class="text-green-500">
@@ -34,7 +51,7 @@ wp_nav_menu([
 
             <!-- Close Menu -->
             <button onclick="toggleMenu()" id="close" class="text-red-500 hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="38px" viewBox="0 -960 960 960" width="38px" fill="#000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
             </button>
             
         </div>
