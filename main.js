@@ -13,13 +13,11 @@ function toggleMenu() {
         mobileNav.classList.remove('hidden');
         hamburgerMenu.classList.add('hidden');
         closeMenuIcon.classList.remove('hidden');
-        document.body.classList.add('overflow-hidden')
     } else {
 
         mobileNav.classList.add('hidden');
         hamburgerMenu.classList.remove('hidden');
         closeMenuIcon.classList.add('hidden');
-        document.body.classList.remove('overflow-hidden');
     }
     
 };

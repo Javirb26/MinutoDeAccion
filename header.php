@@ -24,7 +24,7 @@ wp_nav_menu([
 
 <!-- Mobile navigation -->
 <nav id="mobileNav" class="block md:hidden">
-    <div class="flex items-center justify-between bg-red-300 h-12 px-5">
+    <div class="flex items-center justify-between border-black border-b h-12 px-5">
         <div><h1>logo</h1></div>
         <div class="flex justify-end">
             <!-- Hamburger Menu -->
@@ -46,7 +46,7 @@ wp_nav_menu([
         wp_nav_menu([
             'theme_location' => 'primary',
             'container'      => false,
-            'menu_class'     => 'main-mobile-nav hidden h-screen z-10',
+            'menu_class'     => 'absolute left-[20%] main-mobile-nav hidden h-screen z-20 bg-slate-100 w-[80%]',
             'fallback_cb'    => false, // don’t fall back to a pages list
         ]);
         ?>
