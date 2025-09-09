@@ -1,26 +1,28 @@
-let mobileNav = document.querySelector(".main-mobile-nav");
-let hamburgerMenu = document.getElementById("open");
-let closeMenuIcon = document.getElementById("close");
+// Previous Code that Toggled the Mobile Hamburger Menu before Integration of AlpineJS
 
-let open = false;
-let close = true;
+// let mobileNav = document.querySelector(".main-mobile-nav");
+// let hamburgerMenu = document.getElementById("open");
+// let closeMenuIcon = document.getElementById("close");
 
-function toggleMenu() {
-    open = !open;
-    close = !close;
+// let open = false;
+// let close = true;
 
-    if (open) {
-        mobileNav.classList.remove('hidden');
-        hamburgerMenu.classList.add('hidden');
-        closeMenuIcon.classList.remove('hidden');
-    } else {
+// function toggleMenu() {
+//     open = !open;
+//     close = !close;
 
-        mobileNav.classList.add('hidden');
-        hamburgerMenu.classList.remove('hidden');
-        closeMenuIcon.classList.add('hidden');
-    }
+//     if (open) {
+//         mobileNav.classList.remove('hidden');
+//         hamburgerMenu.classList.add('hidden');
+//         closeMenuIcon.classList.remove('hidden');
+//     } else {
+
+//         mobileNav.classList.add('hidden');
+//         hamburgerMenu.classList.remove('hidden');
+//         closeMenuIcon.classList.add('hidden');
+//     }
     
-};
+// };
 
 
 

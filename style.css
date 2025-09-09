@@ -5,6 +5,8 @@ Theme Name: Minuto De Accion
 */
 :root {
     --olive: #52684f;
+    --olive-md: #2f3a2f;
+    --olive-dark: #3b4939;
 }
 
 .main-nav{
@@ -27,3 +29,23 @@ font-weight: bold;
     max-width: 70px;
 }
 
+.custom-shape-divider-bottom-1757360109 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1757360109 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-bottom-1757360109 .shape-fill {
+    fill: #FFFFFF;
+}
