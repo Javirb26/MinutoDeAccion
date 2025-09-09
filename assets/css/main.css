@@ -633,6 +633,16 @@ video {
   margin-right: 2.5rem;
 }
 
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .ml-5 {
   margin-left: 1.25rem;
 }
@@ -877,6 +887,10 @@ video {
   max-width: 770px;
 }
 
+.max-w-\[1100px\] {
+  max-width: 1100px;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -1041,6 +1055,11 @@ video {
   border-top-right-radius: 1rem;
 }
 
+.rounded-t-lg {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -1109,6 +1128,24 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-slate-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity, 1));
+}
+
+.bg-slate-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[var\(--olive\)\] {
+  background-color: var(--olive);
+}
+
+.bg-\[var\(--olive-light\)\] {
+  background-color: var(--olive-light);
 }
 
 .bg-\[url\(\'https\:\/\/images\.pexels\.com\/photos\/32946430\/pexels-photo-32946430\/free-photo-of-silhouette-of-person-on-a-vibrant-beach-sunset\.jpeg\'\)\] {
@@ -1311,6 +1348,10 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1402,6 +1443,10 @@ video {
   font-weight: 200;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .leading-5 {
   line-height: 1.25rem;
 }
@@ -1486,6 +1531,21 @@ video {
   color: rgb(51 65 85 / var(--tw-text-opacity, 1));
 }
 
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-50 {
+  --tw-text-opacity: 1;
+  color: rgb(249 250 251 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity, 1));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -1501,6 +1561,12 @@ video {
 .shadow-sm {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -1539,6 +1605,16 @@ video {
 /* Optional: your base styles */
 
 /* @layer base { body { @apply antialiased text-gray-800; } } */
+
+.after\:flex-auto::after {
+  content: var(--tw-content);
+  flex: 1 1 auto;
+}
+
+.after\:content-\[\'\'\]::after {
+  --tw-content: '';
+  content: var(--tw-content);
+}
 
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
@@ -1619,6 +1695,10 @@ video {
     min-width: 200px;
   }
 
+  .md\:min-w-\[300px\] {
+    min-width: 300px;
+  }
+
   .md\:max-w-\[1200px\] {
     max-width: 1200px;
   }
@@ -1659,6 +1739,14 @@ video {
     justify-content: space-between;
   }
 
+  .md\:gap-6 {
+    gap: 1.5rem;
+  }
+
+  .md\:gap-10 {
+    gap: 2.5rem;
+  }
+
   .md\:gap-x-8 {
     -moz-column-gap: 2rem;
          column-gap: 2rem;
@@ -1667,6 +1755,16 @@ video {
   .md\:gap-x-6 {
     -moz-column-gap: 1.5rem;
          column-gap: 1.5rem;
+  }
+
+  .md\:gap-x-2 {
+    -moz-column-gap: 0.5rem;
+         column-gap: 0.5rem;
+  }
+
+  .md\:gap-x-10 {
+    -moz-column-gap: 2.5rem;
+         column-gap: 2.5rem;
   }
 
   .md\:rounded-l-2xl {
@@ -1728,6 +1826,11 @@ video {
   .lg\:gap-x-10 {
     -moz-column-gap: 2.5rem;
          column-gap: 2.5rem;
+  }
+
+  .lg\:gap-x-20 {
+    -moz-column-gap: 5rem;
+         column-gap: 5rem;
   }
 
   .lg\:text-8xl {
