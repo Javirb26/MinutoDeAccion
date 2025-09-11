@@ -6,9 +6,13 @@
     <?php wp_head() ?> 
     <script defer src="https://unpkg.com/alpinejs" ></script>
     <style>[x-cloak] { display: none !important; }</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="gilda-display-regular">
     
 <!-- Desktop Navigation -->
 <nav id="desktopNav" class="hidden md:block">

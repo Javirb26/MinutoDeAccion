@@ -10,69 +10,145 @@ $posts_page_url = get_permalink($posts_page_id);
 <main class="z-0"> 
 
     <!-- Hero Section -->
-    <section id="hero" class="relative h-[750px] md:h-[600px] bg-center bg-cover bg-[url('https://images.pexels.com/photos/32946430/pexels-photo-32946430/free-photo-of-silhouette-of-person-on-a-vibrant-beach-sunset.jpeg')] ">
-        <div class="flex flex-col justify-start pt-24 px-4 items-center text-center h-full text-[var(--olive-md)]">
-            <h1 class="pb-2 text-6xl lg:text-8xl">Minuto de Accion</h1> 
-            <p class="text-xl font-medium">Blog de crecimiento personal</p>
+    <section 
+        id="hero" 
+        class="relative px-5 md:px-20 h-[812px] md:h-[900px] bg-center bg-cover 
+    
+    bg-[url('http://minutodeaccion.local/wp-content/uploads/2025/09/hero-section-image-scaled.webp')] "
+    
+    >
+        <div class="flex flex-col justify-center h-full text-white lg:max-w-[560px]">
+            <h1 class="pb-2 text-[40px] lg:text-[72px] leading-[120%]">Unlock you Potential with Personal Growth</h1> 
+            <p class="text-lg font-medium">Welcome to minuto de Accion, your go-to blog for personal development insights and inspiration. Join us on a journey to discover actionable strategies that empower you to live your best life.</p>
             <div class="pt-6">
-                <a href="<?php echo esc_url($posts_page_url); ?>" class="bg-white w-full h-10 px-8 py-2.5 rounded-full">Check out our posts</a>
+                <a href="<?php echo esc_url($posts_page_url); ?>" class="bg-white w-full h-10 px-8 py-2.5 rounded-full text-[var(--olive)] hover:bg-[var(--olive)] hover:text-white transition-all duration-75">Explore</a>
             </div>
         </div>
     </section>
 
     <!-- What we can do Section -->
-    <section class="px-10 pt-20">
-        <div class="text-center">
-            <h2 class="pb-5 text-4xl font-semibold"> Un Minuto Puede <span class="text-[var(--olive)]">cambiar tu vida.</span> </h2>
-            <p class="text-base font-bold">En Minuto de Accion te damos ideas simples y motivacion diaria <br/> para que conviertas tus metas en pasos concretos.</p>
+    <section class="px-4 lg:px-20 pt-20 pb-16 bg-[var(--main-bg)]">
+        <div class="max-w-[768px] mx-auto lg:mx-0">
+            <h3 class="pb-12 lg:pb-20 text-[32px] lg:text-4xl font-semibold">Unlock Your Potential with Our Self-Improvement Strategies and Insights</h3>
         </div>
 
-        <div class="flex items-center justify-between mx-auto max-w-[1400px] pt-16">
-            <div class="flex flex-col items-center justify-center text-center gap-y-4 max-w-[400px]">
+        <div class="flex flex-col lg:flex-row items-center justify-center lg:justify-between max-w-[1400px] gap-y-12">
+            <div class="flex flex-col text-left gap-y-6 max-w-[400px] lg:h-[323px]">
 
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_11_147)">
-                        <path d="M16.3792 31.6201L27.1762 27.1748L31.6215 16.3778L20.8245 20.8231L16.3792 31.6201ZM24 21.7493C25.242 21.7493 26.25 22.7573 26.25 23.9993C26.25 25.2413 25.242 26.2493 24 26.2493C22.758 26.2493 21.75 25.2413 21.75 23.9993C21.75 22.7573 22.758 21.7493 24 21.7493Z" fill="#231F20"/>
-                        <path d="M24 24.7493C24.4142 24.7493 24.75 24.4135 24.75 23.9993C24.75 23.5851 24.4142 23.2493 24 23.2493C23.5858 23.2493 23.25 23.5851 23.25 23.9993C23.25 24.4135 23.5858 24.7493 24 24.7493Z" fill="#231F20"/>
-                        <path d="M24 0C10.7452 0 0 10.7452 0 24C0 37.2547 10.7452 48 24 48C37.2547 48 48 37.2547 48 24C48 10.7452 37.2547 0 24 0ZM24 44.9993C12.402 44.9993 3 35.5973 3 23.9993C3 12.4013 12.402 2.99925 24 2.99925C35.598 2.99925 45 12.4013 45 23.9993C45 35.5973 35.598 44.9993 24 44.9993Z" fill="#231F20"/>
-                        <path d="M39 23.9992C39 23.5844 39.3352 23.2492 39.75 23.2492H43.4812C43.299 18.4304 41.37 14.0602 38.307 10.7534L37.2592 11.8012C36.966 12.0952 36.492 12.0944 36.1987 11.8012C35.9055 11.5079 35.9055 11.0339 36.1987 10.7407L37.2465 9.69294C33.939 6.62994 29.5687 4.70094 24.75 4.51794V8.24919C24.75 8.66394 24.4147 8.99919 24 8.99919C23.5852 8.99919 23.25 8.66394 23.25 8.24919V4.51794C18.4312 4.70019 14.061 6.62919 10.7542 9.69219L11.802 10.7399C12.096 11.0332 12.0952 11.5072 11.802 11.8004C11.5087 12.0937 11.0347 12.0937 10.7415 11.8004L9.69374 10.7527C6.63074 14.0594 4.70174 18.4297 4.51949 23.2484H8.24999C8.66474 23.2484 8.99999 23.5837 8.99999 23.9984C8.99999 24.4132 8.66474 24.7484 8.24999 24.7484H4.51874C4.70099 29.5672 6.62999 33.9374 9.69299 37.2442L10.7407 36.1964C11.034 35.9024 11.508 35.9032 11.8012 36.1964C12.0945 36.4897 12.0945 36.9637 11.8012 37.2569L10.7535 38.3047C14.061 41.3684 18.4312 43.2974 23.25 43.4804V39.7492C23.25 39.3344 23.5852 38.9992 24 38.9992C24.4147 38.9992 24.75 39.3344 24.75 39.7492V43.4804C29.5687 43.2982 33.939 41.3692 37.2457 38.3062L36.198 37.2584C35.904 36.9652 35.9047 36.4912 36.198 36.1979C36.4912 35.9047 36.9652 35.9047 37.2585 36.1979L38.3062 37.2457C41.3692 33.9389 43.2982 29.5687 43.4805 24.7499H39.75C39.3352 24.7492 39 24.4139 39 23.9992ZM33.6937 15.2849L28.4437 28.0349C28.3672 28.2194 28.2202 28.3664 28.0357 28.4429L15.2857 33.6929C15.1935 33.7312 15.096 33.7492 15 33.7492C14.805 33.7492 14.613 33.6727 14.4697 33.5294C14.256 33.3157 14.1915 32.9932 14.3062 32.7134L19.5562 19.9634C19.6327 19.7789 19.7797 19.6319 19.9642 19.5554L32.7142 14.3054C32.994 14.1914 33.3165 14.2552 33.5302 14.4689C33.744 14.6827 33.8085 15.0052 33.6937 15.2849Z" fill="#231F20"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_11_147">
-                        <rect width="48" height="48" fill="white"/>
-                        </clipPath>
-                        </defs>
+                <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24.5822 15.7047C24.8649 15.7048 25.089 15.7843 25.2775 15.9401L25.3557 16.0114C25.5596 16.2144 25.6623 16.4584 25.6623 16.777V26.6295C25.6623 26.9633 25.5584 27.209 25.3625 27.4049C25.1657 27.6019 24.922 27.7046 24.5939 27.7047C24.2681 27.7047 24.0231 27.6016 23.8234 27.401C23.6218 27.1983 23.5188 26.9535 23.5187 26.6334V16.7809C23.5187 16.4452 23.6223 16.1985 23.8156 16.0026C24.0067 15.8089 24.2489 15.7047 24.5822 15.7047ZM30.7258 17.7047C31.0085 17.7048 31.2326 17.7843 31.4211 17.9401L31.4992 18.0114C31.7031 18.2144 31.8058 18.4584 31.8058 18.777V23.5377C31.8058 23.8265 31.7269 24.0498 31.5754 24.233L31.506 24.3092C31.3093 24.5059 31.0657 24.6089 30.7375 24.609C30.4098 24.609 30.1643 24.5059 29.965 24.3082C29.7668 24.1111 29.6623 23.8669 29.6623 23.5377V18.777C29.6623 18.4447 29.7655 18.199 29.9592 18.0026C30.1506 17.809 30.3927 17.7047 30.7258 17.7047ZM18.4387 17.7047C18.7613 17.7047 19.0079 17.8079 19.2121 18.0104V18.0114C19.416 18.2145 19.5187 18.4584 19.5187 18.777V22.6334C19.5187 22.9226 19.4397 23.1459 19.2883 23.3287L19.2189 23.4049C19.022 23.6021 18.7782 23.7047 18.4504 23.7047C18.1241 23.7047 17.8795 23.6015 17.6799 23.401C17.4783 23.1983 17.3752 22.9535 17.3752 22.6334V18.777C17.3752 18.4449 17.4782 18.1991 17.6721 18.0026C17.8632 17.8089 18.1053 17.7047 18.4387 17.7047ZM13.091 35.9703L12.9308 35.8219C11.0798 34.1099 9.64444 32.1158 8.62225 29.8375C7.60129 27.5616 7.09106 25.1738 7.091 22.6696C7.091 17.7242 8.81456 13.5365 12.2697 10.0778C15.7249 6.61932 19.9084 4.89417 24.8488 4.89417C28.9684 4.89423 32.6067 6.10752 35.7814 8.53284C38.9552 10.9575 41.0184 14.1015 41.9816 17.9801L41.9826 17.9811L44.7443 28.9528V28.9537L44.7473 28.9645C44.8549 29.3527 44.7897 29.6726 44.551 29.9762C44.3101 30.2824 44.0046 30.4323 43.5871 30.4323H38.6291V37.526C38.629 38.3388 38.3489 39.0152 37.7785 39.5836C37.2079 40.1522 36.5276 40.4323 35.7101 40.4323H30.6291V43.2291C30.6291 43.5798 30.5133 43.8542 30.2785 44.0846C30.0418 44.3168 29.7607 44.4321 29.4045 44.4323C29.0482 44.4323 28.7749 44.3174 28.551 44.0905V44.0895C28.3248 43.8603 28.2101 43.5846 28.2101 43.2291V39.2291C28.2102 38.875 28.3253 38.5993 28.5549 38.3698C28.7844 38.1403 29.0601 38.026 29.4142 38.026H36.2101V29.2291C36.2102 28.875 36.3253 28.5993 36.5549 28.3698C36.7844 28.1403 37.0601 28.026 37.4142 28.026H42.0148L41.8596 27.4049L39.6574 18.5836C38.8292 15.2773 37.0253 12.5666 34.2609 10.4655C31.4969 8.36482 28.3574 7.31312 24.8596 7.31311C20.6017 7.31311 16.9655 8.79178 13.9807 11.7438C10.995 14.6971 9.4973 18.3089 9.49725 22.5485C9.49725 24.7397 9.94715 26.8309 10.8459 28.817C11.6877 30.6765 12.859 32.3347 14.3557 33.7897L14.6594 34.0787L15.4973 34.8766V43.2291C15.4973 43.582 15.3824 43.8568 15.1516 44.0865C14.9205 44.3164 14.6426 44.4323 14.2853 44.4323C13.9282 44.4322 13.655 44.3165 13.4308 44.0895C13.2051 43.8604 13.091 43.5847 13.091 43.2291V35.9703Z" fill="#040709" stroke="#040709"/>
+                </svg>
+
+                <h5 class="text-[28px] leading-[140%]">Inspiring Success Stories to Motivate Your Journey Towards Greatness</h5>
+                <p class="text-base">Explore practical tips for enhancing your mental wellness and overall happiness.</p>
+            </div>
+            <div class="flex flex-col text-left gap-y-6 max-w-[400px] lg:h-[323px]">
+                
+                <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.0921 15.6541H1.85612C1.38645 15.6541 0.996619 15.4983 0.686619 15.1866C0.376619 14.875 0.221619 14.486 0.221619 14.0196C0.221619 13.553 0.376619 13.1648 0.686619 12.8551C0.996619 12.5455 1.38645 12.3906 1.85612 12.3906H11.0921V5.52464L8.38162 8.24764C8.05162 8.57131 7.66629 8.73314 7.22562 8.73314C6.78462 8.73314 6.39512 8.57131 6.05712 8.24764C5.74712 7.92364 5.59412 7.53964 5.59812 7.09564C5.60212 6.65198 5.76612 6.26814 6.09012 5.94414L11.5306 0.504141C11.8703 0.164141 12.27 -0.00585938 12.7296 -0.00585938C13.1896 -0.00585938 13.5895 0.164141 13.9291 0.504141L19.3816 5.95614C19.6976 6.28147 19.8595 6.66364 19.8671 7.10264C19.8751 7.54197 19.7223 7.92364 19.4086 8.24764C19.0666 8.57131 18.6736 8.73314 18.2296 8.73314C17.786 8.73314 17.4021 8.56731 17.0781 8.23564L14.3671 5.52464V27.6726H39.2001C39.6621 27.6726 40.0496 27.831 40.3626 28.1476C40.6753 28.4643 40.8316 28.8566 40.8316 29.3246C40.8316 29.7893 40.6753 30.176 40.3626 30.4846C40.0496 30.7933 39.6621 30.9476 39.2001 30.9476H29.9726V37.8136L32.6836 35.1026C33.004 34.771 33.3845 34.605 33.8251 34.6046C34.2661 34.6043 34.6608 34.7703 35.0091 35.1026C35.3181 35.4266 35.4706 35.8086 35.4666 36.2486C35.4626 36.6883 35.2988 37.0701 34.9751 37.3941L29.5226 42.8461C29.1823 43.1861 28.7843 43.3541 28.3286 43.3501C27.8733 43.3461 27.4756 43.1781 27.1356 42.8461L21.6836 37.3821C21.3596 37.0661 21.1956 36.6883 21.1916 36.2486C21.1876 35.8086 21.3403 35.4266 21.6496 35.1026C21.9956 34.7703 22.3888 34.6063 22.8291 34.6106C23.2691 34.615 23.6551 34.779 23.9871 35.1026L26.6856 37.8136V30.9476H14.3671C13.4305 30.9476 12.6505 30.6385 12.0271 30.0201C11.4038 29.4021 11.0921 28.6196 11.0921 27.6726V15.6541ZM26.6856 24.6726V15.6541H17.3671V12.3906H26.6856C27.6313 12.3906 28.4156 12.7 29.0386 13.3186C29.6613 13.937 29.9726 14.7155 29.9726 15.6541V24.6726H26.6856Z" fill="#040709"/>
                     </svg>
 
 
-                <h3 class="text-xl font-bold ">Claridad en tus metas</h3>
-                <p class="text-base">Aprende a enfocarte en lo que realmente importa. Consejos prácticos para dejar la confusión atrás y avanzar con propósito.</p>
+                <h5 class="text-[28px] leading-[140%]">Transform Your Life with Proven Techniques for Personal Growth</h5>
+                <p class="text-base">Discover actionable advice to help you achieve your personal goals.</p>
             </div>
-            <div class="flex flex-col items-center justify-center text-center gap-y-4 max-w-[400px]">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.852 41.148C13.6108 42.6214 15.6937 43.657 17.93 44.17C18.144 44.24 18.288 43.96 18.144 43.82C13.354 39.25 15.986 34.304 17.93 32.074C19.316 30.482 21.29 27.86 21.146 24.344C21.146 23.992 21.506 23.71 21.79 23.922C24.508 25.328 26.366 28.422 26.866 30.952C27.654 30.18 27.94 28.984 27.94 27.93C27.94 27.578 28.368 27.296 28.726 27.578C31.3 29.898 35.732 37.772 28.582 43.958C28.44 44.1 28.582 44.382 28.726 44.312C30.894 43.7436 32.9329 42.7646 34.732 41.428C46.386 32.428 38.806 16.468 33.872 11.196C33.23 10.562 32.086 10.984 32.086 11.898C32.014 13.798 31.442 15.906 29.942 17.312C28.798 12.532 24.986 7.10197 19.552 4.42997C18.838 4.07797 17.98 4.63997 18.052 5.41397C18.192 11.954 13.926 16.118 10.208 21.532C6.91802 26.382 4.77402 35.312 11.852 41.148Z" fill="black"/>
+            <div class="flex flex-col text-left gap-y-6 max-w-[400px] lg:h-[323px]">
+
+                <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32.1874 35.5497C35.221 35.5497 37.7929 34.4867 39.9029 32.3607C42.0129 30.2344 43.0679 27.6631 43.0679 24.6467C43.0679 21.6301 42.0129 19.0662 39.9029 16.9552C37.7929 14.8442 35.221 13.7887 32.1874 13.7887C31.2327 13.7887 30.3047 13.9092 29.4034 14.1502C28.5017 14.3912 27.6619 14.7356 26.8839 15.1832C27.9935 16.4579 28.8714 17.8981 29.5174 19.5037C30.1634 21.1094 30.4864 22.8321 30.4864 24.6717C30.4864 26.5114 30.1634 28.2332 29.5174 29.8372C28.8714 31.4412 27.9935 32.8806 26.8839 34.1552C27.6619 34.6029 28.5017 34.9472 29.4034 35.1882C30.3047 35.4292 31.2327 35.5497 32.1874 35.5497ZM24.1874 32.0157C25.0794 31.0681 25.7825 29.9572 26.2969 28.6832C26.8109 27.4096 27.0679 26.0674 27.0679 24.6567C27.0679 23.2461 26.8109 21.9081 26.2969 20.6427C25.7825 19.3771 25.0794 18.2704 24.1874 17.3227C23.2954 18.2704 22.5922 19.3812 22.0779 20.6552C21.5639 21.9289 21.3069 23.2711 21.3069 24.6817C21.3069 26.0924 21.5639 27.4304 22.0779 28.6957C22.5922 29.9614 23.2954 31.0681 24.1874 32.0157ZM16.1874 35.5497C17.142 35.5497 18.07 35.4294 18.9714 35.1887C19.873 34.9477 20.7167 34.6032 21.5024 34.1552C20.385 32.8806 19.5034 31.4404 18.8574 29.8347C18.2114 28.2291 17.8884 26.5064 17.8884 24.6667C17.8884 22.8271 18.2114 21.1052 18.8574 19.5012C19.5034 17.8972 20.385 16.4579 21.5024 15.1832C20.7167 14.7352 19.873 14.3907 18.9714 14.1497C18.07 13.9091 17.142 13.7887 16.1874 13.7887C13.177 13.7887 10.611 14.8436 8.48937 16.9532C6.3677 19.0629 5.30687 21.6259 5.30687 24.6422C5.30687 27.6589 6.3677 30.2309 8.48937 32.3582C10.611 34.4859 13.177 35.5497 16.1874 35.5497ZM16.1874 38.9682C12.2094 38.9682 8.8317 37.5794 6.05437 34.8017C3.27703 32.0241 1.88837 28.6459 1.88837 24.6672C1.88837 20.6889 3.27703 17.3116 6.05437 14.5352C8.8317 11.7586 12.2094 10.3702 16.1874 10.3702C17.6874 10.3702 19.111 10.5831 20.4584 11.0087C21.8054 11.4341 23.0484 12.0387 24.1874 12.8227C25.3264 12.0387 26.5694 11.4341 27.9164 11.0087C29.2637 10.5831 30.6874 10.3702 32.1874 10.3702C36.1654 10.3702 39.543 11.7591 42.3204 14.5367C45.0977 17.3144 46.4864 20.6926 46.4864 24.6712C46.4864 28.6496 45.0977 32.0269 42.3204 34.8032C39.543 37.5799 36.1654 38.9682 32.1874 38.9682C30.6874 38.9682 29.2637 38.7554 27.9164 38.3297C26.5694 37.9044 25.3264 37.2997 24.1874 36.5157C23.0484 37.2997 21.8054 37.9044 20.4584 38.3297C19.111 38.7554 17.6874 38.9682 16.1874 38.9682Z" fill="#040709"/>
                 </svg>
 
-                <h3 class="text-xl font-bold ">Insipraccion diaria</h3>
-                <p>Un impulso cada día puede marcar la diferencia. Encuentra reflexiones breves que te animen a mantenerte en movimiento.</p>
-            </div>
-            <div class="flex flex-col items-center justify-center text-center gap-y-4 max-w-[400px]">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_11_145)">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M22.4 14.4C22.4 6.4471 28.8471 0 36.8 0H48V11.2C48 19.1529 41.553 25.6 33.6 25.6H25.6V48H22.4V35.2H14.4C6.4471 35.2 0 28.7529 0 20.8V9.6H11.2C15.7236 9.6 19.7601 11.6859 22.4 14.9483V14.4ZM26.0687 19.6685L35.6688 10.0685L37.9315 12.3313L28.3315 21.9313L26.0687 19.6685ZM19.6687 31.5313L10.0687 21.9313L12.3315 19.6685L21.9315 29.2685L19.6687 31.5313Z" fill="black"/>
-                    </g>
-                    <defs>
-                    <clipPath id="clip0_11_145">
-                    <rect width="48" height="48" fill="white"/>
-                    </clipPath>
-                    </defs>
-                </svg>
-
-                <h3 class="text-xl font-bold ">Pequeños pasos, grandes cambios</h3>
-                <p>No necesitas hacerlo todo hoy. Descubre cómo las acciones constantes y pequeñas construyen resultados extraordinarios.</p>
+                <h5 class="text-[28px] leading-[140%]">Cultivate a Positive Mindset for Lasting Change and Fulfillment</h5>
+                <p class="text-base">Join us in fostering resilience and a growth-oriented mindset.</p>
+                
             </div>
         </div>
     </section>
 
+    <!-- Latest Blog Section -->
+    <section class="flex flex-col items-center justify-center px-4 lg:px-20">
+        <div class="pt-16 pb-12 text-center font">
+            <p class="pb-3 text-base font-bold lora-semibold">Blog</p>
+            <h2 class="pb-5 text-4xl">
+                Explore Our Latest Insights
+            </h2>
+            <p class="leading-[160%]">
+                Discover personal growth tips and inspiring stories.
+            </p>
+        </div>
+
+        <div>
+            <div 
+             class="flex flex-col items-center w-full max-w-[1400px] transition-all duration-100  md:items-stretch md:flex-row md:flex-wrap md:gap-x-10 md:justify-center">
+             <?php 
+                $latest_posts = new WP_Query([
+                'posts_per_page' => 3,
+                'post_status'    => 'publish',
+                ]);
+
+                 while($latest_posts->have_posts()) {
+                     $latest_posts->the_post(); ?>
+                     <!-- inner container -->
+                     <div class="flex flex-col max-w-[335px] w-full lg:max-w-[405px] items-center my-8 rounded-lg bg-white shadow-md">
+     
+                         <!-- Mobile link container -->
+                         <a class="cursor-pointer" href="<?php the_permalink() ?>">
+                             <!-- image -->
+                             <?php if ( has_post_thumbnail() ) {
+                                 the_post_thumbnail(
+                                     'large',
+                                     ['class' => 'w-[335px] lg:w-[405px] h-[221px] object-cover rounded-t-lg'] 
+                                 );
+                             
+                             } else { ?>
+                                 <img class="'w-[335px] lg:w-[405px] h-[221px] object-cover rounded-t-lg" src="https://images.pexels.com/photos/32946430/pexels-photo-32946430/free-photo-of-silhouette-of-person-on-a-vibrant-beach-sunset.jpeg" alt="">
+                             <?php } ?>
+     
+                             <div class="flex flex-col px-4 pt-6 text-left">
+                                <p class="text-sm font-light text-gray-400 "><?php echo get_the_date(); ?></p>
+                                 <!-- title -->
+                                 <h5 class="pt-4 text-xl lg:text-[28px] hover:text-[var(--olive)]"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h5>
+                                 <!-- excerpt -->
+                                 <p class="flex flex-wrap pt-2 text-base text-gray-700 text-wrap"><?php echo esc_html( get_the_excerpt() ); ?></p>
+                                 <!-- tag -->
+                                 <?php 
+                                     $tags = get_the_tags();
+                                     if ( $tags ) : ?>
+                                         
+                                         <?php foreach($tags as $tag) : ?> 
+                                             <div class="my-2">
+                                                 <span class="px-2.5 py-1 text-sm font-light text-gray-600 border rounded-full">
+                                                     <?php echo esc_html($tag->name); ?> 
+                                                 </span>
+                                             </div>
+                                         <?php endforeach; ?>
+                                         
+                                <?php endif; ?>    
+     
+                                     <div class="flex items-center pb-10 pt-6 gap-x-2 hover:text-[var(--olive)]">
+                                         <a class="text-lg" href="<?php the_permalink() ?>">Read Article</a>
+                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 4.5L21 12l-7.5 7.5M21 12H3" />
+                                         </svg>
+                                     </div>
+                                
+                             </div>
+                         </a>
+                     </div>
+             <?php }
+             ?>
+         </div>
+        </div>
+
+        <!-- viewmore button -->
+        <div class="mt-12 mb-16 lg:mb-24">
+            <a class="lora-medium leading-[160%] px-6 py-[10px] rounded-xl bg-[var(--main-bg)] hover:bg-white transition-all duration-100 border" href="#">View all</a>
+        </div>
+    </section>
+
+    <!-- Possible Testimonial or CTA Section -->
+    <section>
+
+    </section>
 </main>
 <?php get_footer() ?>
