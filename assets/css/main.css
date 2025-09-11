@@ -1142,6 +1142,10 @@ video {
   border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
 }
 
+.border-\[var\(--olive\)\] {
+  border-color: var(--olive);
+}
+
 .border-y-gray-400 {
   --tw-border-opacity: 1;
   border-top-color: rgb(156 163 175 / var(--tw-border-opacity, 1));
@@ -1195,6 +1199,20 @@ video {
 
 .bg-\[var\(--olive-light\)\] {
   background-color: var(--olive-light);
+}
+
+.bg-\[var\(--main-bg\)\] {
+  background-color: var(--main-bg);
+}
+
+.bg-yellow-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 249 195 / var(--tw-bg-opacity, 1));
+}
+
+.bg-yellow-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 252 232 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[url\(\'https\:\/\/images\.pexels\.com\/photos\/32946430\/pexels-photo-32946430\/free-photo-of-silhouette-of-person-on-a-vibrant-beach-sunset\.jpeg\'\)\] {
@@ -1674,8 +1692,22 @@ video {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-\[var\(--olive\)\]:hover {
+  background-color: var(--olive);
+}
+
+.hover\:bg-yellow-50:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 252 232 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:text-\[var\(--olive\)\]:hover {
   color: var(--olive);
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .hover\:shadow-md:hover {

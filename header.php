@@ -12,8 +12,9 @@
     
 <!-- Desktop Navigation -->
 <nav id="desktopNav" class="hidden md:block">
-    <div class="flex items-center justify-between p-4 border-b border-black">
-        <div class="flex items-center"> 
+    <div class="flex items-center justify-between p-4 bg-[var(--main-bg)]">
+        <div class="flex items-center">
+            <div> 
                 <a href="/" class="">
                     <?php
                         if ( function_exists( 'the_custom_logo' ) ) {
@@ -21,17 +22,22 @@
                         }
                     ?>
                 </a>
-                <a class="text-[var(--olive)] text-2xl font-medium ml-5" href="/">Minuto De Accion</a>
+                <!-- <a class="text-[var(--olive)] text-2xl font-medium ml-5" href="/">Minuto De Accion</a> -->
+            </div>
+            <div>
+                <?php
+                wp_nav_menu([
+                    'theme_location' => 'primary',
+                    'container'      => false,
+                    'menu_class'     => 'main-nav pl-6',
+                    'fallback_cb'    => false, // don’t fall back to a pages list
+                ]);
+                ?>
+            </div>
         </div>
+        
         <div>
-            <?php
-            wp_nav_menu([
-                'theme_location' => 'primary',
-                'container'      => false,
-                'menu_class'     => 'main-nav',
-                'fallback_cb'    => false, // don’t fall back to a pages list
-            ]);
-            ?>
+            <a class="px-4 py-2 hover:bg-yellow-50 rounded-full border border-[var(--olive)] bg-[var(--olive)] text-white hover:text-[var(--olive)] transition-all duration-100" href="#">Join the Newsletter</a>
         </div>
     </div>
 </nav>

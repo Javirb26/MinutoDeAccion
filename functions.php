@@ -60,7 +60,7 @@ add_filter('nav_menu_css_class', function ($classes, $item, $args, $depth) {
         $classes[] = 'relative group'; // e.g., for dropdown hovers later
         // Optional “active” styling based on WP classes:
         if (in_array('current-menu-item', $classes, true) || in_array('current-menu-ancestor', $classes, true)) {
-            $classes[] = 'text-[var(--olive)] bg-gray-100 rounded-md';
+            $classes[] = 'text-[var(--olive)]';
         }
     }
     return $classes;
