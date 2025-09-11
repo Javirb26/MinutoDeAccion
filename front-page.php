@@ -1,3 +1,4 @@
+
 <?php
 // Get the ID of the posts page
 $posts_page_id = get_option('page_for_posts');
