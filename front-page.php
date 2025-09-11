@@ -146,7 +146,9 @@ $posts_page_url = get_permalink($posts_page_id);
         </div>
     </section>
 
-    <!-- Testimonial Section -->
+    <!-- Possible Testimonial or CTA Section -->
+    <section>
 
+    </section>
 </main>
 <?php get_footer() ?>
