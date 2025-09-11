@@ -10,12 +10,18 @@ $posts_page_url = get_permalink($posts_page_id);
 <main class="z-0"> 
 
     <!-- Hero Section -->
-    <section id="hero" class="relative h-[750px] md:h-[600px] bg-center bg-cover bg-[url('https://images.pexels.com/photos/32946430/pexels-photo-32946430/free-photo-of-silhouette-of-person-on-a-vibrant-beach-sunset.jpeg')] ">
-        <div class="flex flex-col justify-start pt-24 px-4 items-center text-center h-full text-[var(--olive-md)]">
-            <h1 class="pb-2 text-6xl lg:text-8xl">Minuto de Accion</h1> 
-            <p class="text-xl font-medium">Blog de crecimiento personal</p>
+    <section 
+        id="hero" 
+        class="relative px-5 md:px-20 h-[812px] md:h-[900px] bg-center bg-cover 
+    
+    bg-[url('http://minutodeaccion.local/wp-content/uploads/2025/09/hero-section-image-scaled.webp')] "
+    
+    >
+        <div class="flex flex-col justify-center h-full text-white lg:max-w-[560px]">
+            <h1 class="pb-2 text-[40px] lg:text-[72px] leading-[120%]">Unlock you Potential with Personal Growth</h1> 
+            <p class="text-lg font-medium">Welcome to minuto de Accion, your go-to blog for personal development insights and inspiration. Join us on a journey to discover actionable strategies that empower you to live your best life.</p>
             <div class="pt-6">
-                <a href="<?php echo esc_url($posts_page_url); ?>" class="bg-white w-full h-10 px-8 py-2.5 rounded-full">Check out our posts</a>
+                <a href="<?php echo esc_url($posts_page_url); ?>" class="bg-white w-full h-10 px-8 py-2.5 rounded-full text-[var(--olive)] hover:bg-[var(--olive)] hover:text-white transition-all duration-75">Explore</a>
             </div>
         </div>
     </section>
