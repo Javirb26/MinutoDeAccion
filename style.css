@@ -3,6 +3,14 @@
 Theme Name: Minuto De Accion
 
 */
+:root {
+    --olive-light: #769772;
+    --olive: #52684f;
+    --olive-md: #2f3a2f;
+    --olive-dark: #3b4939;
+    --main-bg: #FFF7CC;
+    --footer-cta-bg: #665600;
+}
 
 .main-nav{
     display: flex;
@@ -12,6 +20,35 @@ Theme Name: Minuto De Accion
 }
 .main-nav a {
     text-decoration: none;
-    color: black;
     font-size: 18px;
+}
+
+.main-mobile-nav a {
+ font-size: 35px;
+font-weight: bold;
+}
+
+.custom-logo {
+    max-width: 70px;
+}
+
+.custom-shape-divider-bottom-1757360109 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1757360109 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-bottom-1757360109 .shape-fill {
+    fill: #FFFFFF;
 }

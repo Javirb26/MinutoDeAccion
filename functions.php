@@ -4,7 +4,7 @@
 function addTitle() {
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
-}
+};
 
 add_action('after_setup_theme', 'addTitle');
 
@@ -53,3 +53,47 @@ add_action('after_setup_theme', function () {
         'primary' => __('Primary Menu', 'your-textdomain'),
     ]);
 });
+
+// Add classes to <li>
+add_filter('nav_menu_css_class', function ($classes, $item, $args, $depth) {
+    if (($args->theme_location ?? null) === 'primary') {
+        $classes[] = 'relative group'; // e.g., for dropdown hovers later
+        // Optional “active” styling based on WP classes:
+        if (in_array('current-menu-item', $classes, true) || in_array('current-menu-ancestor', $classes, true)) {
+            $classes[] = 'text-[var(--olive)] bg-gray-100 rounded-md';
+        }
+    }
+    return $classes;
+}, 10, 4);
+
+// Add classes to <a>
+add_filter('nav_menu_link_attributes', function ($atts, $item, $args, $depth) {
+    if (($args->theme_location ?? null) === 'primary') {
+        $base = 'block px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 focus:outline-none focus:ring text-black ';
+        $atts['class'] = trim(($atts['class'] ?? '') . ' ' . $base);
+        // Optional: accessible current-page style
+        if (!empty($atts['aria-current'])) {
+            $atts['class'] .= 'bg-gray-100';
+        }
+    }
+    return $atts;
+}, 10, 4);
+
+// enables svg upload to wp media
+function enable_svg_upload( $mime_types=array() ){ $mime_types['svg'] = 'image/svg+xml'; return $mime_types; } add_filter('upload_mimes', 'enable_svg_upload' );
+
+// Get Logo
+function themename_custom_logo_setup() {
+	$defaults = array(
+		'height'               => 100,
+		'width'                => 400,
+		'flex-height'          => true,
+		'flex-width'           => true,
+		'header-text'          => array( 'site-title', 'site-description' ),
+		'unlink-homepage-logo' => true, 
+	);
+	add_theme_support( 'custom-logo', $defaults );
+}
+add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
+
+add_theme_support( 'post-thumbnails' );
