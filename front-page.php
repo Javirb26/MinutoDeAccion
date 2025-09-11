@@ -27,7 +27,7 @@ $posts_page_url = get_permalink($posts_page_id);
     </section>
 
     <!-- What we can do Section -->
-    <section class="px-20 pt-20 pb-16 bg-[var(--main-bg)]">
+    <section class="px-4 lg:px-20 pt-20 pb-16 bg-[var(--main-bg)]">
         <div class="max-w-[768px] mx-auto lg:mx-0">
             <h3 class="pb-12 lg:pb-20 text-[32px] lg:text-4xl font-semibold">Unlock Your Potential with Our Self-Improvement Strategies and Insights</h3>
         </div>
@@ -64,6 +64,89 @@ $posts_page_url = get_permalink($posts_page_id);
             </div>
         </div>
     </section>
+
+    <!-- Latest Blog Section -->
+    <section class="flex flex-col items-center justify-center px-4 lg:px-20">
+        <div class="pt-16 pb-12 text-center font">
+            <p class="pb-3 text-base font-bold lora-semibold">Blog</p>
+            <h2 class="pb-5 text-4xl">
+                Explore Our Latest Insights
+            </h2>
+            <p class="leading-[160%]">
+                Discover personal growth tips and inspiring stories.
+            </p>
+        </div>
+
+        <div>
+            <div 
+             class="flex flex-col items-center w-full max-w-[1400px] transition-all duration-100  md:items-stretch md:flex-row md:flex-wrap md:gap-x-10 md:justify-center">
+             <?php 
+                $latest_posts = new WP_Query([
+                'posts_per_page' => 3,
+                'post_status'    => 'publish',
+                ]);
+
+                 while($latest_posts->have_posts()) {
+                     $latest_posts->the_post(); ?>
+                     <!-- inner container -->
+                     <div class="flex flex-col max-w-[335px] w-full lg:max-w-[405px] items-center my-8 rounded-lg bg-white shadow-md">
+     
+                         <!-- Mobile link container -->
+                         <a class="cursor-pointer" href="<?php the_permalink() ?>">
+                             <!-- image -->
+                             <?php if ( has_post_thumbnail() ) {
+                                 the_post_thumbnail(
+                                     'large',
+                                     ['class' => 'w-[335px] lg:w-[405px] h-[221px] object-cover rounded-t-lg'] 
+                                 );
+                             
+                             } else { ?>
+                                 <img class="'w-[335px] lg:w-[405px] h-[221px] object-cover rounded-t-lg" src="https://images.pexels.com/photos/32946430/pexels-photo-32946430/free-photo-of-silhouette-of-person-on-a-vibrant-beach-sunset.jpeg" alt="">
+                             <?php } ?>
+     
+                             <div class="flex flex-col px-4 pt-6 text-left">
+                                <p class="text-sm font-light text-gray-400 "><?php echo get_the_date(); ?></p>
+                                 <!-- title -->
+                                 <h5 class="pt-4 text-xl lg:text-[28px] hover:text-[var(--olive)]"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h5>
+                                 <!-- excerpt -->
+                                 <p class="flex flex-wrap pt-2 text-base text-gray-700 text-wrap"><?php echo esc_html( get_the_excerpt() ); ?></p>
+                                 <!-- tag -->
+                                 <?php 
+                                     $tags = get_the_tags();
+                                     if ( $tags ) : ?>
+                                         
+                                         <?php foreach($tags as $tag) : ?> 
+                                             <div class="my-2">
+                                                 <span class="px-2.5 py-1 text-sm font-light text-gray-600 border rounded-full">
+                                                     <?php echo esc_html($tag->name); ?> 
+                                                 </span>
+                                             </div>
+                                         <?php endforeach; ?>
+                                         
+                                <?php endif; ?>    
+     
+                                     <div class="flex items-center pb-10 pt-6 gap-x-2 hover:text-[var(--olive)]">
+                                         <a class="text-lg" href="<?php the_permalink() ?>">Read Article</a>
+                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 4.5L21 12l-7.5 7.5M21 12H3" />
+                                         </svg>
+                                     </div>
+                                
+                             </div>
+                         </a>
+                     </div>
+             <?php }
+             ?>
+         </div>
+        </div>
+
+        <!-- viewmore button -->
+        <div class="mt-12 mb-16 lg:mb-24">
+            <a class="lora-medium leading-[160%] px-6 py-[10px] rounded-xl bg-[var(--main-bg)] hover:bg-white transition-all duration-100 border" href="#">View all</a>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
 
 </main>
 <?php get_footer() ?>
