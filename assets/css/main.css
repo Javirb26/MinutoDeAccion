@@ -816,22 +816,6 @@ video {
   height: 500px;
 }
 
-.h-1 {
-  height: 0.25rem;
-}
-
-.h-\[812px\] {
-  height: 812px;
-}
-
-.h-\[323px\] {
-  height: 323px;
-}
-
-.h-\[221px\] {
-  height: 221px;
-}
-
 .max-h-\[60px\] {
   max-height: 60px;
 }
@@ -898,34 +882,6 @@ video {
 
 .w-\[280px\] {
   width: 280px;
-}
-
-.w-2 {
-  width: 0.5rem;
-}
-
-.w-1 {
-  width: 0.25rem;
-}
-
-.w-\[335px\] {
-  width: 335px;
-}
-
-.w-\[3335px\] {
-  width: 3335px;
-}
-
-.w-\[403px\] {
-  width: 403px;
-}
-
-.w-\[221px\] {
-  width: 221px;
-}
-
-.w-\[22-px\] {
-  width: 22-px;
 }
 
 .max-w-\[1400px\] {
@@ -1142,14 +1098,6 @@ video {
 .gap-x-5 {
   -moz-column-gap: 1.25rem;
        column-gap: 1.25rem;
-}
-
-.gap-y-3 {
-  row-gap: 0.75rem;
-}
-
-.gap-y-12 {
-  row-gap: 3rem;
 }
 
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
@@ -1439,26 +1387,6 @@ video {
   padding-right: 0.5rem;
 }
 
-.py-3\.5 {
-  padding-top: 0.875rem;
-  padding-bottom: 0.875rem;
-}
-
-.px-20 {
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
-
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-.py-\[10px\] {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -1553,18 +1481,6 @@ video {
 
 .pb-10 {
   padding-bottom: 2.5rem;
-}
-
-.pl-10 {
-  padding-left: 2.5rem;
-}
-
-.pl-5 {
-  padding-left: 1.25rem;
-}
-
-.pb-12 {
-  padding-bottom: 3rem;
 }
 
 .text-left {
@@ -1833,14 +1749,6 @@ video {
   transition-duration: 100ms;
 }
 
-.duration-200 {
-  transition-duration: 200ms;
-}
-
-.duration-75 {
-  transition-duration: 75ms;
-}
-
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
@@ -1874,20 +1782,6 @@ video {
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
-}
-
-.hover\:bg-\[var\(--olive\)\]:hover {
-  background-color: var(--olive);
-}
-
-.hover\:bg-yellow-50:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 252 232 / var(--tw-bg-opacity, 1));
-}
-
-.hover\:bg-white:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:text-\[var\(--olive\)\]:hover {
@@ -2204,23 +2098,6 @@ video {
   .lg\:text-8xl {
     font-size: 6rem;
     line-height: 1;
-  }
-
-  .lg\:text-\[72px\] {
-    font-size: 72px;
-  }
-
-  .lg\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
-  .lg\:text-\[28px\] {
-    font-size: 28px;
-  }
-
-  .lg\:text-\[var\(--olive\)\] {
-    color: var(--olive);
   }
 }
 
