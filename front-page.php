@@ -19,10 +19,10 @@ $posts_page_url = get_permalink($posts_page_id);
     
     >
         <div class="flex flex-col justify-center h-full text-white lg:max-w-[560px]">
-            <h1 class="pb-2 text-[40px] lg:text-[72px] leading-[120%]">Unlock you Potential with Personal Growth</h1> 
-            <p class="text-lg font-medium">Welcome to minuto de Accion, your go-to blog for personal development insights and inspiration. Join us on a journey to discover actionable strategies that empower you to live your best life.</p>
+            <h1 class="pb-2 text-[40px] lg:text-[72px] leading-[120%] gilda">Unlock you Potential with Personal Growth</h1> 
+            <p class="text-lg lora-medium">Welcome to minuto de Accion, your go-to blog for personal development insights and inspiration. Join us on a journey to discover actionable strategies that empower you to live your best life.</p>
             <div class="pt-6">
-                <a href="<?php echo esc_url($posts_page_url); ?>" class="bg-white w-full h-10 px-8 py-2.5 rounded-full text-[var(--olive)] hover:bg-[var(--olive)] hover:text-white transition-all duration-75">Explore</a>
+                <a href="<?php echo esc_url($posts_page_url); ?>" class="bg-white w-full h-10 px-8 py-2.5 rounded-full text-[var(--olive)] hover:bg-[var(--olive)] hover:text-white transition-all duration-75 lora-medium">Explore</a>
             </div>
         </div>
     </section>
@@ -30,7 +30,7 @@ $posts_page_url = get_permalink($posts_page_id);
     <!-- What we can do Section -->
     <section class="px-4 lg:px-20 pt-20 pb-16 bg-[var(--main-bg)]">
         <div class="max-w-[768px] mx-auto lg:mx-0">
-            <h3 class="pb-12 lg:pb-20 text-[32px] lg:text-4xl font-semibold">Unlock Your Potential with Our Self-Improvement Strategies and Insights</h3>
+            <h3 class="pb-12 lg:pb-20 text-[32px] lg:text-4xl font-semibold gilda">Unlock Your Potential with Our Self-Improvement Strategies and Insights</h3>
         </div>
 
         <div class="flex flex-col lg:flex-row items-center justify-center lg:justify-between max-w-[1400px] gap-y-12">
@@ -40,8 +40,8 @@ $posts_page_url = get_permalink($posts_page_id);
                     <path d="M24.5822 15.7047C24.8649 15.7048 25.089 15.7843 25.2775 15.9401L25.3557 16.0114C25.5596 16.2144 25.6623 16.4584 25.6623 16.777V26.6295C25.6623 26.9633 25.5584 27.209 25.3625 27.4049C25.1657 27.6019 24.922 27.7046 24.5939 27.7047C24.2681 27.7047 24.0231 27.6016 23.8234 27.401C23.6218 27.1983 23.5188 26.9535 23.5187 26.6334V16.7809C23.5187 16.4452 23.6223 16.1985 23.8156 16.0026C24.0067 15.8089 24.2489 15.7047 24.5822 15.7047ZM30.7258 17.7047C31.0085 17.7048 31.2326 17.7843 31.4211 17.9401L31.4992 18.0114C31.7031 18.2144 31.8058 18.4584 31.8058 18.777V23.5377C31.8058 23.8265 31.7269 24.0498 31.5754 24.233L31.506 24.3092C31.3093 24.5059 31.0657 24.6089 30.7375 24.609C30.4098 24.609 30.1643 24.5059 29.965 24.3082C29.7668 24.1111 29.6623 23.8669 29.6623 23.5377V18.777C29.6623 18.4447 29.7655 18.199 29.9592 18.0026C30.1506 17.809 30.3927 17.7047 30.7258 17.7047ZM18.4387 17.7047C18.7613 17.7047 19.0079 17.8079 19.2121 18.0104V18.0114C19.416 18.2145 19.5187 18.4584 19.5187 18.777V22.6334C19.5187 22.9226 19.4397 23.1459 19.2883 23.3287L19.2189 23.4049C19.022 23.6021 18.7782 23.7047 18.4504 23.7047C18.1241 23.7047 17.8795 23.6015 17.6799 23.401C17.4783 23.1983 17.3752 22.9535 17.3752 22.6334V18.777C17.3752 18.4449 17.4782 18.1991 17.6721 18.0026C17.8632 17.8089 18.1053 17.7047 18.4387 17.7047ZM13.091 35.9703L12.9308 35.8219C11.0798 34.1099 9.64444 32.1158 8.62225 29.8375C7.60129 27.5616 7.09106 25.1738 7.091 22.6696C7.091 17.7242 8.81456 13.5365 12.2697 10.0778C15.7249 6.61932 19.9084 4.89417 24.8488 4.89417C28.9684 4.89423 32.6067 6.10752 35.7814 8.53284C38.9552 10.9575 41.0184 14.1015 41.9816 17.9801L41.9826 17.9811L44.7443 28.9528V28.9537L44.7473 28.9645C44.8549 29.3527 44.7897 29.6726 44.551 29.9762C44.3101 30.2824 44.0046 30.4323 43.5871 30.4323H38.6291V37.526C38.629 38.3388 38.3489 39.0152 37.7785 39.5836C37.2079 40.1522 36.5276 40.4323 35.7101 40.4323H30.6291V43.2291C30.6291 43.5798 30.5133 43.8542 30.2785 44.0846C30.0418 44.3168 29.7607 44.4321 29.4045 44.4323C29.0482 44.4323 28.7749 44.3174 28.551 44.0905V44.0895C28.3248 43.8603 28.2101 43.5846 28.2101 43.2291V39.2291C28.2102 38.875 28.3253 38.5993 28.5549 38.3698C28.7844 38.1403 29.0601 38.026 29.4142 38.026H36.2101V29.2291C36.2102 28.875 36.3253 28.5993 36.5549 28.3698C36.7844 28.1403 37.0601 28.026 37.4142 28.026H42.0148L41.8596 27.4049L39.6574 18.5836C38.8292 15.2773 37.0253 12.5666 34.2609 10.4655C31.4969 8.36482 28.3574 7.31312 24.8596 7.31311C20.6017 7.31311 16.9655 8.79178 13.9807 11.7438C10.995 14.6971 9.4973 18.3089 9.49725 22.5485C9.49725 24.7397 9.94715 26.8309 10.8459 28.817C11.6877 30.6765 12.859 32.3347 14.3557 33.7897L14.6594 34.0787L15.4973 34.8766V43.2291C15.4973 43.582 15.3824 43.8568 15.1516 44.0865C14.9205 44.3164 14.6426 44.4323 14.2853 44.4323C13.9282 44.4322 13.655 44.3165 13.4308 44.0895C13.2051 43.8604 13.091 43.5847 13.091 43.2291V35.9703Z" fill="#040709" stroke="#040709"/>
                 </svg>
 
-                <h5 class="text-[28px] leading-[140%]">Inspiring Success Stories to Motivate Your Journey Towards Greatness</h5>
-                <p class="text-base">Explore practical tips for enhancing your mental wellness and overall happiness.</p>
+                <h5 class="text-[28px] leading-[140%] gilda">Inspiring Success Stories to Motivate Your Journey Towards Greatness</h5>
+                <p class="text-base lora">Explore practical tips for enhancing your mental wellness and overall happiness.</p>
             </div>
             <div class="flex flex-col text-left gap-y-6 max-w-[400px] lg:h-[323px]">
                 
@@ -50,8 +50,8 @@ $posts_page_url = get_permalink($posts_page_id);
                     </svg>
 
 
-                <h5 class="text-[28px] leading-[140%]">Transform Your Life with Proven Techniques for Personal Growth</h5>
-                <p class="text-base">Discover actionable advice to help you achieve your personal goals.</p>
+                <h5 class="text-[28px] leading-[140%] gilda">Transform Your Life with Proven Techniques for Personal Growth</h5>
+                <p class="text-base lora">Discover actionable advice to help you achieve your personal goals.</p>
             </div>
             <div class="flex flex-col text-left gap-y-6 max-w-[400px] lg:h-[323px]">
 
@@ -59,8 +59,8 @@ $posts_page_url = get_permalink($posts_page_id);
                     <path d="M32.1874 35.5497C35.221 35.5497 37.7929 34.4867 39.9029 32.3607C42.0129 30.2344 43.0679 27.6631 43.0679 24.6467C43.0679 21.6301 42.0129 19.0662 39.9029 16.9552C37.7929 14.8442 35.221 13.7887 32.1874 13.7887C31.2327 13.7887 30.3047 13.9092 29.4034 14.1502C28.5017 14.3912 27.6619 14.7356 26.8839 15.1832C27.9935 16.4579 28.8714 17.8981 29.5174 19.5037C30.1634 21.1094 30.4864 22.8321 30.4864 24.6717C30.4864 26.5114 30.1634 28.2332 29.5174 29.8372C28.8714 31.4412 27.9935 32.8806 26.8839 34.1552C27.6619 34.6029 28.5017 34.9472 29.4034 35.1882C30.3047 35.4292 31.2327 35.5497 32.1874 35.5497ZM24.1874 32.0157C25.0794 31.0681 25.7825 29.9572 26.2969 28.6832C26.8109 27.4096 27.0679 26.0674 27.0679 24.6567C27.0679 23.2461 26.8109 21.9081 26.2969 20.6427C25.7825 19.3771 25.0794 18.2704 24.1874 17.3227C23.2954 18.2704 22.5922 19.3812 22.0779 20.6552C21.5639 21.9289 21.3069 23.2711 21.3069 24.6817C21.3069 26.0924 21.5639 27.4304 22.0779 28.6957C22.5922 29.9614 23.2954 31.0681 24.1874 32.0157ZM16.1874 35.5497C17.142 35.5497 18.07 35.4294 18.9714 35.1887C19.873 34.9477 20.7167 34.6032 21.5024 34.1552C20.385 32.8806 19.5034 31.4404 18.8574 29.8347C18.2114 28.2291 17.8884 26.5064 17.8884 24.6667C17.8884 22.8271 18.2114 21.1052 18.8574 19.5012C19.5034 17.8972 20.385 16.4579 21.5024 15.1832C20.7167 14.7352 19.873 14.3907 18.9714 14.1497C18.07 13.9091 17.142 13.7887 16.1874 13.7887C13.177 13.7887 10.611 14.8436 8.48937 16.9532C6.3677 19.0629 5.30687 21.6259 5.30687 24.6422C5.30687 27.6589 6.3677 30.2309 8.48937 32.3582C10.611 34.4859 13.177 35.5497 16.1874 35.5497ZM16.1874 38.9682C12.2094 38.9682 8.8317 37.5794 6.05437 34.8017C3.27703 32.0241 1.88837 28.6459 1.88837 24.6672C1.88837 20.6889 3.27703 17.3116 6.05437 14.5352C8.8317 11.7586 12.2094 10.3702 16.1874 10.3702C17.6874 10.3702 19.111 10.5831 20.4584 11.0087C21.8054 11.4341 23.0484 12.0387 24.1874 12.8227C25.3264 12.0387 26.5694 11.4341 27.9164 11.0087C29.2637 10.5831 30.6874 10.3702 32.1874 10.3702C36.1654 10.3702 39.543 11.7591 42.3204 14.5367C45.0977 17.3144 46.4864 20.6926 46.4864 24.6712C46.4864 28.6496 45.0977 32.0269 42.3204 34.8032C39.543 37.5799 36.1654 38.9682 32.1874 38.9682C30.6874 38.9682 29.2637 38.7554 27.9164 38.3297C26.5694 37.9044 25.3264 37.2997 24.1874 36.5157C23.0484 37.2997 21.8054 37.9044 20.4584 38.3297C19.111 38.7554 17.6874 38.9682 16.1874 38.9682Z" fill="#040709"/>
                 </svg>
 
-                <h5 class="text-[28px] leading-[140%]">Cultivate a Positive Mindset for Lasting Change and Fulfillment</h5>
-                <p class="text-base">Join us in fostering resilience and a growth-oriented mindset.</p>
+                <h5 class="text-[28px] leading-[140%] gilda">Cultivate a Positive Mindset for Lasting Change and Fulfillment</h5>
+                <p class="text-base lora">Join us in fostering resilience and a growth-oriented mindset.</p>
                 
             </div>
         </div>
@@ -70,10 +70,10 @@ $posts_page_url = get_permalink($posts_page_id);
     <section class="flex flex-col items-center justify-center px-4 lg:px-20">
         <div class="pt-16 pb-12 text-center font">
             <p class="pb-3 text-base font-bold lora-semibold">Blog</p>
-            <h2 class="pb-5 text-4xl">
+            <h2 class="pb-5 text-4xl gilda">
                 Explore Our Latest Insights
             </h2>
-            <p class="leading-[160%]">
+            <p class="leading-[160%] lora-semibold">
                 Discover personal growth tips and inspiring stories.
             </p>
         </div>
@@ -108,9 +108,9 @@ $posts_page_url = get_permalink($posts_page_id);
                              <div class="flex flex-col px-4 pt-6 text-left">
                                 <p class="text-sm font-light text-gray-400 "><?php echo get_the_date(); ?></p>
                                  <!-- title -->
-                                 <h5 class="pt-4 text-xl lg:text-[28px] hover:text-[var(--olive)]"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h5>
+                                 <h5 class="pt-4 text-xl lg:text-[28px] hover:text-[var(--olive)] gilda"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h5>
                                  <!-- excerpt -->
-                                 <p class="flex flex-wrap pt-2 text-base text-gray-700 text-wrap"><?php echo esc_html( get_the_excerpt() ); ?></p>
+                                 <p class="flex flex-wrap pt-2 text-base text-gray-700 text-wrap lora"><?php echo esc_html( get_the_excerpt() ); ?></p>
                                  <!-- tag -->
                                  <?php 
                                      $tags = get_the_tags();
@@ -126,7 +126,7 @@ $posts_page_url = get_permalink($posts_page_id);
                                          
                                 <?php endif; ?>    
      
-                                     <div class="flex items-center pb-10 pt-6 gap-x-2 hover:text-[var(--olive)]">
+                                     <div class="flex items-center pb-10 pt-6 gap-x-2 hover:text-[var(--olive)] lora-medium">
                                          <a class="text-lg" href="<?php the_permalink() ?>">Read Article</a>
                                          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 4.5L21 12l-7.5 7.5M21 12H3" />
