@@ -727,6 +727,10 @@ video {
   max-width: 768px;
 }
 
+.max-w-\[271px\] {
+  max-width: 271px;
+}
+
 .-translate-x-0 {
   --tw-translate-x: -0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -799,6 +803,10 @@ video {
   row-gap: 1.5rem;
 }
 
+.gap-y-5 {
+  row-gap: 1.25rem;
+}
+
 .text-wrap {
   text-wrap: wrap;
 }
@@ -819,6 +827,10 @@ video {
   border-radius: 0.75rem;
 }
 
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
 .rounded-t-lg {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
@@ -830,6 +842,10 @@ video {
 
 .border-\[var\(--olive\)\] {
   border-color: var(--olive);
+}
+
+.border-\[var\(--main-bg\)\] {
+  border-color: var(--main-bg);
 }
 
 .bg-\[var\(--main-bg\)\] {
@@ -864,6 +880,10 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[var\(--footer-cta-bg\)\] {
+  background-color: var(--footer-cta-bg);
+}
+
 .bg-\[url\(\'http\:\/\/minutodeaccion\.local\/wp-content\/uploads\/2025\/09\/hero-section-image-scaled\.webp\'\)\] {
   background-image: url('http://minutodeaccion.local/wp-content/uploads/2025/09/hero-section-image-scaled.webp');
 }
@@ -883,6 +903,10 @@ video {
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-8 {
+  padding: 2rem;
 }
 
 .px-2\.5 {
@@ -938,6 +962,11 @@ video {
 .py-\[10px\] {
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .pb-10 {
@@ -1242,6 +1271,18 @@ video {
     width: 350px;
   }
 
+  .md\:max-w-\[400px\] {
+    max-width: 400px;
+  }
+
+  .md\:max-w-\[600px\] {
+    max-width: 600px;
+  }
+
+  .md\:max-w-\[700px\] {
+    max-width: 700px;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -1297,12 +1338,20 @@ video {
     width: 405px;
   }
 
+  .lg\:w-full {
+    width: 100%;
+  }
+
   .lg\:max-w-\[405px\] {
     max-width: 405px;
   }
 
   .lg\:max-w-\[560px\] {
     max-width: 560px;
+  }
+
+  .lg\:max-w-\[100\%\] {
+    max-width: 100%;
   }
 
   .lg\:flex-row {
@@ -1316,6 +1365,21 @@ video {
   .lg\:px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
+  }
+
+  .lg\:py-\[112px\] {
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+
+  .lg\:px-64 {
+    padding-left: 16rem;
+    padding-right: 16rem;
+  }
+
+  .lg\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .lg\:pb-20 {
@@ -1333,6 +1397,10 @@ video {
 
   .lg\:text-\[72px\] {
     font-size: 72px;
+  }
+
+  .lg\:text-\[52px\] {
+    font-size: 52px;
   }
 
   .lg\:text-\[var\(--olive\)\] {

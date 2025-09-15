@@ -147,8 +147,16 @@ $posts_page_url = get_permalink($posts_page_id);
         </div>
     </section>
 
-    <!-- Possible Testimonial / CTA Section -->
-    <section>
+    <!-- Possible CTA Section -->
+    <section class="bg-[var(--footer-cta-bg)] text-white px-5 lg:px-20 py-16 lg:py-[112px]">
+
+            <div class="flex flex-col items-center justify-center text-center mx-auto max-w-[271px] md:max-w-[700px] lg:max-w-[100%] gap-y-5 p-8 lg:px-64 lg:py-20 border border-[var(--main-bg)] rounded-2xl">
+              <h2 class="text-4xl lg:text-[52px]  gilda leading-[120%]  ">Join Our Community Today!</h2> 
+              <p class="lora leading-[160%] text-lg">Stay updated with our latest insights and tips for personal growth. Subscribe now!</p>
+
+                <a href="" class="p-4 text-black bg-white rounded-xl">Join the Newsletter</a>
+
+            </div>
 
     </section>
 </main>
