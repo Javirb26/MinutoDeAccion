@@ -6,8 +6,8 @@
 
 # Node / build
 node_modules/
-assets/css/*.map
 assets/css/main.css
+assets/css/*.map
 dist/
 .cache/
 
