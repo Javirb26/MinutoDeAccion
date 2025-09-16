@@ -1,6 +1,6 @@
 <?php get_header() ?>
 
-<main class="flex flex-col w-full mx-auto bg-slate-50">
+<main x-data="{ click: false }" class="flex flex-col w-full mx-auto bg-slate-50">
 
     <section class="flex flex-col w-full px-5 py-16 transition-all duration-100 lg:py-28 lg:px-20 lg:max-w-[768px]">
         <p class="lora-semibold">Inspiration</p>
@@ -9,7 +9,7 @@
         <p class="pt-2 lg:pt-6 lora lg:text-lg leading-[160%]">Explore articles on personal growth, success stories, and tips for enhancing your mental wellness.</p>
     </section>
 
-    <!-- small viewport -->
+
      <section class="flex flex-col justify-center bg-[var(--main-bg)] px-5">
         <div class="pt-16 pb-12 text-center lg:pb-20 lg:pt-28">
             <p class="lora-semibold">Blog</p>
@@ -17,12 +17,19 @@
             <p class="lora lg:text-lg leading-[160%] pt-5 lg:pt-6">Explore our collection of personal growth articles.</p>
         </div>
          <div 
-             class="flex flex-col items-center w-full max-w-[1200px] transition-all duration-100  md:items-stretch md:flex-row md:flex-wrap md:gap-x-10 md:justify-center">
+             class="flex flex-col items-center w-full max-w-[1280px] transition-all duration-100  md:items-stretch md:flex-row md:flex-wrap md:gap-x-2 md:justify-center mx-auto mb-28">
              <?php 
-                 while(have_posts()) {
-                     the_post(); ?>
+                $all_posts = new WP_Query([
+                'posts_per_page' => -1,
+                'post_status'    => 'publish',
+                ]);
+                $count = 0;
+                 while($all_posts -> have_posts()) {
+                     $all_posts->the_post(); 
+                     $count++;
+                     $hidden_class = $count > 3 ? 'hidden' : '';?>
                      <!-- inner container -->
-                     <div class="flex flex-col xs:w-[300px] sm:w-[330px] lg:w-[350px] items-stretch my-8 rounded-lg bg-white shadow-md mx-auto">
+                     <div class="flex flex-col xs:w-[300px] sm:w-[330px] lg:w-[405px] items-stretch my-8 rounded-lg bg-white shadow-md mx-auto card <?php echo $hidden_class; ?>">
      
                          <!-- Mobile link container -->
                          <a class="cursor-pointer" href="<?php the_permalink() ?>">
@@ -30,7 +37,7 @@
                              <?php if ( has_post_thumbnail() ) {
                                  the_post_thumbnail(
                                      'large',
-                                     ['class' => 'md:w-[350px] h-[221px] object-cover rounded-t-lg'] 
+                                     ['class' => 'h-[221px] object-cover rounded-t-lg'] 
                                  );
                              
                              } else { ?>
@@ -69,8 +76,9 @@
                              </div>
                          </a>
                      </div>
-             <?php }
+             <?php } wp_reset_postdata();
              ?>
+             <button @click="click = !click":class="click ? 'hidden' : 'block' " id="view-all" class="px-6 py-3 border border-[var(--footer-cta-bg)] rounded-xl bg-white hover:text-white hover:bg-[var(--footer-cta-bg)] transition-all mb-16 lg:mb-28 mt-12 lg:mt-20">View all</button>
          </div>
      </section>
      <section class="px-10 bg-white">
@@ -118,11 +126,22 @@
             
         </div>
         <div class="pb-16 mx-auto text-center">
-            <h4 class="pb-3 text-2xl gilda">Still have questions?</h4>
-            <p class="lora leading-[160%] pb-6">We're here to help!</p>
-            <a class="lora-medium bg-[var(--footer-cta-bg)] text-white px-6 py-3 rounded-xl" href="#">Contact</a>
+            <h4 class="pb-3 text-2xl lg:text-4xl gilda">Still have questions?</h4>
+            <p class="lora lg:text-lg leading-[160%] pb-6">We're here to help!</p>
+            <a class="lora-medium bg-[var(--footer-cta-bg)] hover:bg-white transition-all text-white hover:text-black hover:border hover:border-[var(--footer-cta-bg)] px-6 py-3 rounded-xl" href="#">Contact</a>
         </div>
      </section>
+     <section class="bg-[var(--footer-cta-bg)] text-white px-5 lg:px-20 py-16 lg:py-[112px]">
+
+            <div class="flex flex-col items-center justify-center text-center mx-auto max-w-[271px] md:max-w-[700px] lg:max-w-[100%] gap-y-5 p-8 lg:px-64 lg:py-20 border border-[var(--main-bg)] rounded-2xl">
+              <h2 class="text-4xl lg:text-[52px]  gilda leading-[120%]  ">Join Our Community Today!</h2> 
+              <p class="lora leading-[160%] text-lg">Stay updated with our latest insights and tips for personal growth. Subscribe now!</p>
+
+                <a href="" class="p-4 text-black bg-white rounded-xl">Join the Newsletter</a>
+
+            </div>
+
+    </section>
 </main>
 
 
