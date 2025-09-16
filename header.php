@@ -25,7 +25,6 @@
                         }
                     ?>
                 </a>
-                <!-- <a class="text-[var(--olive)] text-2xl font-medium ml-5" href="/">Minuto De Accion</a> -->
             </div>
             <div>
                 <?php
@@ -33,7 +32,7 @@
                     'theme_location' => 'primary',
                     'container'      => false,
                     'menu_class'     => 'main-nav pl-6',
-                    'fallback_cb'    => false, // don’t fall back to a pages list
+                    'fallback_cb'    => false,
                 ]);
                 ?>
             </div>

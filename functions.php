@@ -59,11 +59,23 @@ add_action('after_setup_theme', function () {
 // Add classes to <li>
 add_filter('nav_menu_css_class', function ($classes, $item, $args, $depth) {
     if (($args->theme_location ?? null) === 'primary') {
-        $classes[] = 'relative group'; // e.g., for dropdown hovers later
-        // Optional “active” styling based on WP classes:
+        $classes[] = 'relative group';
         if (in_array('current-menu-item', $classes, true) || in_array('current-menu-ancestor', $classes, true)) {
             $classes[] = 'lg:text-[var(--olive)]';
         }
+    }
+    return $classes;
+}, 10, 4);
+add_filter('nav_menu_css_class', function ($classes, $item, $args, $depth) {
+    if (($args->theme_location ?? null) === 'footer_menu') {
+        $classes[] = 'relative group hover:text-[var(--olive)] hover:scale-110 transition-all';
+    }
+    return $classes;
+}, 10, 4);
+
+add_filter('nav_menu_css_class', function ($classes, $item, $args, $depth) {
+    if (($args->theme_location ?? null) === 'social') {
+        $classes[] = 'relative group hover:text-[var(--olive)] hover:scale-125 transition-all';
     }
     return $classes;
 }, 10, 4);
@@ -71,7 +83,7 @@ add_filter('nav_menu_css_class', function ($classes, $item, $args, $depth) {
 // Add classes to <a>
 add_filter('nav_menu_link_attributes', function ($atts, $item, $args, $depth) {
     if (($args->theme_location ?? null) === 'primary') {
-        $base = 'block pl-5 py-2 font-medium text-3xl  rounded-md text-sm font-medium hover:underline focus:outline-none focus:ring text-black ';
+        $base = 'block px-5 py-2 font-medium text-3xl  rounded-md text-sm font-medium hover:underline focus:outline-none focus:ring text-black ';
         $atts['class'] = trim(($atts['class'] ?? '') . ' ' . $base);
         // Optional: accessible current-page style
         if (!empty($atts['aria-current'])) {
