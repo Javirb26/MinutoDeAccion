@@ -1,6 +1,6 @@
 <?php get_header() ?>
 
-<main x-data="{ click: false }" class="flex flex-col w-full mx-auto bg-slate-50">
+<main x-data="{ click: false, faqOpen1: false, faqOpen2: false, faqOpen3: false, }" class="flex flex-col w-full mx-auto bg-slate-50">
 
     <section class="flex flex-col w-full px-5 py-16 transition-all duration-100 lg:py-28 lg:px-20 lg:max-w-[768px]">
         <p class="lora-semibold">Inspiration</p>
@@ -81,16 +81,17 @@
              <button @click="click = !click":class="click ? 'hidden' : 'block' " id="view-all" class="px-6 py-3 border border-[var(--footer-cta-bg)] rounded-xl bg-white hover:text-white hover:bg-[var(--footer-cta-bg)] transition-all mb-16 lg:mb-28 mt-12 lg:mt-20">View all</button>
          </div>
      </section>
+     <!-- FAQ Section -->
      <section class="px-10 bg-white">
-        <div class="pt-16 pb-12 text-center">
+        <div class="pt-16 pb-12 text-center max-w-[768px] mx-auto ">
             <h2 class="text-4xl gilda ">FAQs</h2>
             <p class="lora leading-[160%] pt-5">Find answers to common questions about our blog and how to navigate it effectively.</p>
         </div>
-        <div class="pb-12">
-            <details class="pb-5 border-t">
+        <div class="pb-12 max-w-[768px] mx-auto">
+            <details @click="faqOpen1 = !faqOpen1" class="pb-5 border-t">
                 <summary class="flex items-center justify-between py-5 list-none lora-bold">What is this blog? 
                     <span>
-                        <svg class="rotate-180" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg :class="faqOpen1 ? 'rotate-0 transition-all ease-in-out' : 'rotate-180 transition-all ease-in-out' " width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7.85352 1.60791C7.97858 1.60791 8.07879 1.64574 8.18555 1.75244L14.7783 8.34424C14.8875 8.45346 14.9228 8.55216 14.9229 8.66846C14.9229 8.78476 14.8874 8.88346 14.7783 8.99268C14.6743 9.09672 14.5718 9.13711 14.4375 9.13721C14.303 9.13721 14.1999 9.09684 14.0957 8.99268L14.0947 8.9917L8.32422 3.25342L7.85254 2.78467L1.61133 9.02588C1.50767 9.12953 1.41904 9.15869 1.31152 9.15479C1.18583 9.15019 1.07763 9.10742 0.962891 8.99268C0.858743 8.88852 0.818359 8.78638 0.818359 8.65186C0.818372 8.51735 0.85874 8.41519 0.962891 8.31104L7.52148 1.75244C7.62824 1.64568 7.72848 1.60795 7.85352 1.60791Z" fill="#040709" stroke="#040709" stroke-width="1.33333"/>
                         </svg>
                     </span>
@@ -99,10 +100,10 @@
                 This blog focuses on personal growth and self-improvement. We provide insights, tips, and resources to help you on your journey. Our goal is to empower you to take action and make positive changes in your life.
                 </p>
             </details>
-            <details class="pb-5 border-t ">
+            <details @click="faqOpen2 = !faqOpen2" class="pb-5 border-t ">
                 <summary class="flex items-center justify-between py-5 list-none lora-bold">How to Navigate? 
                     <span>
-                        <svg class="rotate-180" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg :class="faqOpen2 ? 'rotate-0 transition-all ease-in-out' : 'rotate-180 transition-all ease-in-out' " width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7.85352 1.60791C7.97858 1.60791 8.07879 1.64574 8.18555 1.75244L14.7783 8.34424C14.8875 8.45346 14.9228 8.55216 14.9229 8.66846C14.9229 8.78476 14.8874 8.88346 14.7783 8.99268C14.6743 9.09672 14.5718 9.13711 14.4375 9.13721C14.303 9.13721 14.1999 9.09684 14.0957 8.99268L14.0947 8.9917L8.32422 3.25342L7.85254 2.78467L1.61133 9.02588C1.50767 9.12953 1.41904 9.15869 1.31152 9.15479C1.18583 9.15019 1.07763 9.10742 0.962891 8.99268C0.858743 8.88852 0.818359 8.78638 0.818359 8.65186C0.818372 8.51735 0.85874 8.41519 0.962891 8.31104L7.52148 1.75244C7.62824 1.64568 7.72848 1.60795 7.85352 1.60791Z" fill="#040709" stroke="#040709" stroke-width="1.33333"/>
                         </svg>
                     </span>
@@ -111,10 +112,10 @@
                 Navigating our blog is simple! Use the menu to access different sections, including articles and resources. You can also use the search bar to find specific topics.
                 </p>
             </details>
-            <details class="pb-5 border-t">
+            <details @click="faqOpen3 = !faqOpen3" class="pb-5 border-t">
                 <summary class="flex items-center justify-between py-5 list-none lora-bold">How to subscribe? 
                     <span>
-                        <svg class="rotate-180" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg :class="faqOpen3 ? 'rotate-0 transition-all ease-in-out' : 'rotate-180 transition-all ease-in-out' " width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7.85352 1.60791C7.97858 1.60791 8.07879 1.64574 8.18555 1.75244L14.7783 8.34424C14.8875 8.45346 14.9228 8.55216 14.9229 8.66846C14.9229 8.78476 14.8874 8.88346 14.7783 8.99268C14.6743 9.09672 14.5718 9.13711 14.4375 9.13721C14.303 9.13721 14.1999 9.09684 14.0957 8.99268L14.0947 8.9917L8.32422 3.25342L7.85254 2.78467L1.61133 9.02588C1.50767 9.12953 1.41904 9.15869 1.31152 9.15479C1.18583 9.15019 1.07763 9.10742 0.962891 8.99268C0.858743 8.88852 0.818359 8.78638 0.818359 8.65186C0.818372 8.51735 0.85874 8.41519 0.962891 8.31104L7.52148 1.75244C7.62824 1.64568 7.72848 1.60795 7.85352 1.60791Z" fill="#040709" stroke="#040709" stroke-width="1.33333"/>
                         </svg>
                     </span>
@@ -131,6 +132,7 @@
             <a class="lora-medium bg-[var(--footer-cta-bg)] hover:bg-white transition-all text-white hover:text-black hover:border hover:border-[var(--footer-cta-bg)] px-6 py-3 rounded-xl" href="#">Contact</a>
         </div>
      </section>
+     <!-- CTA Section -->
      <section class="bg-[var(--footer-cta-bg)] text-white px-5 lg:px-20 py-16 lg:py-[112px]">
 
             <div class="flex flex-col items-center justify-center text-center mx-auto max-w-[271px] md:max-w-[700px] lg:max-w-[100%] gap-y-5 p-8 lg:px-64 lg:py-20 border border-[var(--main-bg)] rounded-2xl">
