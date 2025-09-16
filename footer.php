@@ -1,5 +1,5 @@
-<footer class="bg-[var(--main-bg)] py-12 px-5 lg:p-20"> 
-    <section class="max-w-[1280px] flex flex-col items-center justify-center pb-12 lg:justify-between lg:flex-row gap-y-12 border-b border-black">
+<footer class="bg-[var(--main-bg)] py-12 px-5 lg:p-20 mx-auto "> 
+    <section class="mx-auto  max-w-[1440px] flex flex-col items-center justify-center pb-12 border-b border-black lg:justify-between lg:flex-row gap-y-12">
         <div class="flex justify-start lg:w-1/3"> 
                 <a href="/" class="">
                     <?php
@@ -10,7 +10,7 @@
                 </a>
                 
         </div>
-        <nav class="flex justify-center lg:w-1/3" aria-label="Footer Navigation">
+        <nav class="flex justify-center lg:w-1/3 " aria-label="Footer Navigation">
             <?php
             wp_nav_menu([
             'theme_location' => 'footer_menu',

@@ -89,7 +89,7 @@
             <p class="lora lg:text-lg leading-[160%] pt-5">Find answers to common questions about our blog and how to navigate it effectively.</p>
         </div>
         <div class="pb-12 max-w-[768px] mx-auto">
-            <details @click="faqOpen1 = !faqOpen1" class="pb-5 border-t">
+            <details @click="faqOpen1 = !faqOpen1" class="pb-5 border-t cursor-pointer">
                 <summary class="flex items-center justify-between py-5 list-none lora-bold">What is this blog? 
                     <span>
                         <svg :class="faqOpen1 ? 'rotate-0 transition-all ease-in-out' : 'rotate-180 transition-all ease-in-out' " width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -101,7 +101,7 @@
                 This blog focuses on personal growth and self-improvement. We provide insights, tips, and resources to help you on your journey. Our goal is to empower you to take action and make positive changes in your life.
                 </p>
             </details>
-            <details @click="faqOpen2 = !faqOpen2" class="pb-5 border-t ">
+            <details @click="faqOpen2 = !faqOpen2" class="pb-5 border-t cursor-pointer">
                 <summary class="flex items-center justify-between py-5 list-none lora-bold">How to Navigate? 
                     <span>
                         <svg :class="faqOpen2 ? 'rotate-0 transition-all ease-in-out' : 'rotate-180 transition-all ease-in-out' " width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -113,7 +113,7 @@
                 Navigating our blog is simple! Use the menu to access different sections, including articles and resources. You can also use the search bar to find specific topics.
                 </p>
             </details>
-            <details @click="faqOpen3 = !faqOpen3" class="pb-5 border-t border-b">
+            <details @click="faqOpen3 = !faqOpen3" class="pb-5 border-t border-b cursor-pointer">
                 <summary class="flex items-center justify-between py-5 list-none lora-bold">How to subscribe? 
                     <span>
                         <svg :class="faqOpen3 ? 'rotate-0 transition-all ease-in-out' : 'rotate-180 transition-all ease-in-out' " width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -140,7 +140,7 @@
               <h2 class="text-4xl lg:text-[52px]  gilda leading-[120%]  ">Join Our Community Today!</h2> 
               <p class="lora leading-[160%] text-lg">Stay updated with our latest insights and tips for personal growth. Subscribe now!</p>
 
-                <a href="" class="p-4 text-black bg-white rounded-xl">Join the Newsletter</a>
+                <a href="" class="p-4 text-black transition-all bg-white border border-white rounded-xl hover:bg-transparent hover:text-white hover:scale-110">Join the Newsletter</a>
 
             </div>
 
