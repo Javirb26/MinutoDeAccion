@@ -78,14 +78,15 @@
                      </div>
              <?php } wp_reset_postdata();
              ?>
-             <button @click="click = !click":class="click ? 'hidden' : 'block' " id="view-all" class="px-6 py-3 border border-[var(--footer-cta-bg)] rounded-xl bg-white hover:text-white hover:bg-[var(--footer-cta-bg)] transition-all mb-16 lg:mb-28 mt-12 lg:mt-20">View all</button>
+             
          </div>
+         <button @click="click = !click":class="click ? 'hidden' : 'block' " id="view-all" class="px-6 py-3 border border-[var(--footer-cta-bg)] rounded-xl bg-white hover:text-white hover:bg-[var(--footer-cta-bg)] transition-all mb-16 lg:mb-28 max-w-[107px] mx-auto">View all</button>
      </section>
      <!-- FAQ Section -->
      <section class="px-10 bg-white">
         <div class="pt-16 pb-12 text-center max-w-[768px] mx-auto ">
-            <h2 class="text-4xl gilda ">FAQs</h2>
-            <p class="lora leading-[160%] pt-5">Find answers to common questions about our blog and how to navigate it effectively.</p>
+            <h2 class="text-4xl lg:text-5xl gilda ">FAQs</h2>
+            <p class="lora lg:text-lg leading-[160%] pt-5">Find answers to common questions about our blog and how to navigate it effectively.</p>
         </div>
         <div class="pb-12 max-w-[768px] mx-auto">
             <details @click="faqOpen1 = !faqOpen1" class="pb-5 border-t">
@@ -112,7 +113,7 @@
                 Navigating our blog is simple! Use the menu to access different sections, including articles and resources. You can also use the search bar to find specific topics.
                 </p>
             </details>
-            <details @click="faqOpen3 = !faqOpen3" class="pb-5 border-t">
+            <details @click="faqOpen3 = !faqOpen3" class="pb-5 border-t border-b">
                 <summary class="flex items-center justify-between py-5 list-none lora-bold">How to subscribe? 
                     <span>
                         <svg :class="faqOpen3 ? 'rotate-0 transition-all ease-in-out' : 'rotate-180 transition-all ease-in-out' " width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
