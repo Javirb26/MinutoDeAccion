@@ -2,13 +2,15 @@
 
 <main class="flex flex-col w-full mx-auto bg-slate-50">
 
-    <section class="flex flex-col items-center w-full px-4 py-10 text-center transition-all duration-100 md:py-20 bg-[var(--olive-light)]">
-        <h1 class="pb-3 text-5xl font-bold md:text-6xl">Blog de <br class="block md:hidden" />Crecimiento Personal</h1>
-        <p class="pt-2 text-lg italic font-extralight"><q>Cree en ti y haz que suceda en todas las cosas</q></p>
+    <section class="flex flex-col w-full px-5 py-16 transition-all duration-100 md:py-20">
+        <p class="pb-3 lora-semibold leading-[150%]">Inspiration</p>
+        <h1 class="text-5xl md:text-6xl gilda leading-[120%]">Empower Your Journey</h1>
+        <!-- <p class="pb-3 italic text-md font-extralight gilda"><q>Cree en ti y haz que suceda en todas las cosas</q></p> -->
+        <p class="pt-2 lora">Explore articles on personal growth, success stories, and tips for enhancing your mental wellness.</p>
     </section>
 
     <!-- small viewport -->
-     <section class="flex justify-center">
+     <section class="flex justify-center bg-[var(--main-bg)]">
          <div 
              class="flex flex-col items-center w-full max-w-[1200px] transition-all duration-100  md:items-stretch md:flex-row md:flex-wrap md:gap-x-10 md:justify-center">
              <?php 

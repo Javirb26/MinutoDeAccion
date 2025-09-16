@@ -1185,6 +1185,10 @@ video {
   line-height: 160%;
 }
 
+.leading-\[150\%\] {
+  line-height: 150%;
+}
+
 .text-\[var\(--olive\)\] {
   color: var(--olive);
 }
