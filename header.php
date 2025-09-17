@@ -15,7 +15,7 @@
 <body>
     
 <!-- Desktop Navigation -->
-<nav id="desktopNav" class="sticky top-0 hidden md:block bg-[var(--main-bg)] shadow-md">
+<nav id="desktopNav" class="sticky top-0 hidden md:block bg-[var(--main-bg)] shadow-md no-print">
     <div class="flex items-center justify-between p-4  max-w-[1440px] mx-auto">
         <div class="flex items-center">
             <div> 
@@ -46,7 +46,7 @@
 </nav>
 
 <!-- Mobile navigation -->
-<nav x-data="{ open: false }" id="mobileNav" class="block md:hidden">
+<nav x-data="{ open: false }" id="mobileNav" class="block md:hidden no-print">
     <div class="flex items-center justify-between h-20 px-5 bg-[var(--main-bg)]">
         <div class="flex items-center"> 
                 <a href="/" class="">

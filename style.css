@@ -149,3 +149,26 @@ div.pmb-print-this-page {
 div a.button__link {
   max-width: 222px;
 }
+
+@media print {
+  header, nav, footer, .sidebar, .ad, .no-print {
+    display: none !important;
+  }
+
+  main, article {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  body {
+    font: 12pt/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: #111;
+  }
+
+  img, figure {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3 { break-after: avoid; }
+} 

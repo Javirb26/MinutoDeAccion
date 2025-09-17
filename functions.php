@@ -147,3 +147,19 @@ function social_menu_icons( $item_output, $item, $depth, $args ) {
     return $item_output;
 }
 add_filter( 'walker_nav_menu_start_el', 'social_menu_icons', 10, 4 );
+
+// Add a body class on print view
+add_filter('body_class', function ($classes) {
+  if (isset($_GET['print']) && $_GET['print'] === '1') $classes[] = 'is-print-view';
+  return $classes;
+});
+
+// Load dedicated print css on ?print=1
+add_action('wp_enqueue_scripts', function () {
+  if (isset($_GET['print']) && $_GET['print'] === '1') {
+    wp_enqueue_style('print-css', get_stylesheet_directory_uri() . '/assets/css/print.css', [], null, 'print');
+    wp_enqueue_style('print-screen-css', get_stylesheet_directory_uri() . '/assets/css/print-screen.css', [], null, 'all'); // optional
+  }
+});
+
+
