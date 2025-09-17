@@ -117,3 +117,58 @@ Theme Name: Minuto De Accion
   font-size: 18px;
   font-family: "Lora", serif;
 }
+
+
+a.wp-block-button__link[href*="print-my-blog"] {
+  background-color: green;
+  color: #fff;              
+  border: none;
+  border-radius: 25px;
+  padding: 10px 16px;
+  margin-bottom: 15px;
+  text-decoration: none;     
+  display: inline-block; 
+  
+
+  transition: 
+    background-color 0.3s ease,
+    transform 150ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+a.wp-block-button__link[href*="print-my-blog"]:hover {
+  background-color: rgb(2, 211, 2);
+  transform: scale(1.1); 
+}
+
+div.pmb-print-this-page {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+div a.button__link {
+  max-width: 222px;
+}
+
+@media print {
+  header, nav, footer, .sidebar, .ad, .no-print {
+    display: none !important;
+  }
+
+  main, article {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  body {
+    font: 12pt/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: #111;
+  }
+
+  img, figure {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3 { break-after: avoid; }
+} 
