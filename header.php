@@ -15,8 +15,8 @@
 <body>
     
 <!-- Desktop Navigation -->
-<nav id="desktopNav" class="sticky top-0 hidden md:block">
-    <div class="flex items-center justify-between p-4 bg-[var(--main-bg)] shadow-md">
+<nav id="desktopNav" class="sticky top-0 hidden md:block bg-[var(--main-bg)] shadow-md">
+    <div class="flex items-center justify-between p-4  max-w-[1440px] mx-auto">
         <div class="flex items-center">
             <div> 
                 <a href="/" class="">
