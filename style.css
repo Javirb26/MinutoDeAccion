@@ -97,3 +97,23 @@ Theme Name: Minuto De Accion
 .custom-shape-divider-bottom-1757360109 .shape-fill {
     fill: #FFFFFF;
 }
+
+#post h2 {
+  font-size: 32px;
+  line-height: 120%;
+  font-family: "Gilda Display", serif;
+  font-weight: 600;
+  font-style: bold;
+  /* padding-bottom: 16px; */
+}
+
+#post img {
+  border-radius: 5%;
+  box-shadow: 0 4px 6px -1px black;
+  margin:10px 0 10px 0 ;
+}
+
+#post p, li {
+  font-size: 18px;
+  font-family: "Lora", serif;
+}
