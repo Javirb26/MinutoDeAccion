@@ -9,13 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     
 <!-- Desktop Navigation -->
-<nav id="desktopNav" class="hidden md:block">
-    <div class="flex items-center justify-between p-4 bg-[var(--main-bg)]">
+<nav id="desktopNav" class="sticky top-0 hidden md:block">
+    <div class="flex items-center justify-between p-4 bg-[var(--main-bg)] shadow-md">
         <div class="flex items-center">
             <div> 
                 <a href="/" class="">

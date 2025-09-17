@@ -147,4 +147,3 @@ function social_menu_icons( $item_output, $item, $depth, $args ) {
     return $item_output;
 }
 add_filter( 'walker_nav_menu_start_el', 'social_menu_icons', 10, 4 );
-

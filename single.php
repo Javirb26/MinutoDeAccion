@@ -10,7 +10,7 @@
                     <div class="mb-6"><a class="lora-semibold"  href="#">Blog</a></div>
                     <h2 class="text-4xl lg:text-[52px] gilda leading-[120%]"><?php the_title() ?></h2>
                     <p class="pt-8 lora">By <strong>Fernando Alvarez</strong></p>
-                    <p class="pt-2 mb-12 text-sm font-light lora-semibold">
+                    <p class="pt-2 mb-4 text-sm font-light lora-semibold">
                         <?php echo get_the_date(); ?> 
                         <span class="px-1">&#8226;</span>
                         <span>
@@ -42,7 +42,7 @@
     </section>
 
     <section class="bg-[var(--main-bg)]">
-        <div id="post" class="bg-[var(--main-bg)] px-5 py-16 flex flex-col gap-y-5 text-left lg:justify-end lg:items-start lg:pl-20 max-w-[1280px]">
+        <div id="post" class="bg-[var(--main-bg)] px-5 py-16 flex flex-col gap-y-5 text-left lg:justify-end lg:items-start max-w-[1280px] mx-auto">
             <?php the_content() ?>
         </div>
     </section>
