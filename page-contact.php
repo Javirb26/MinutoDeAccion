@@ -2,15 +2,17 @@
 
 <main>
 
-    <section class="flex flex-col w-full px-5 py-16 transition-all duration-100 lg:py-28 lg:px-20 lg:max-w-[768px]">
-        <h1 class="text-5xl lg:text-7xl gilda leading-[120%] pt-3 lg:pt-4">Lets Connect!</h1>
-        <!-- <p class="pb-3 italic text-md font-extralight gilda"><q>Cree en ti y haz que suceda en todas las cosas</q></p> -->
-        <p class="pt-2 lg:pt-6 lora lg:text-lg leading-[160%]">We’d love to hear from you! Reach out with any questions or feedback.</p>
+    <section class="flex flex-col w-full px-5 py-16 transition-all duration-100 lg:py-28 lg:px-20 max-w-[1440px] mx-auto">
+        <div class="lg:max-w-[768px]">
+            <h1 class="text-5xl lg:text-7xl gilda leading-[120%] pt-3 lg:pt-4">Lets Connect!</h1>
+            <!-- <p class="pb-3 italic text-md font-extralight gilda"><q>Cree en ti y haz que suceda en todas las cosas</q></p> -->
+            <p class="pt-2 lg:pt-6 lora lg:text-lg leading-[160%]">We’d love to hear from you! Reach out with any questions or feedback.</p>
+        </div>
     </section>
 
     <section class="bg-[var(--main-bg)] px-20">
 
-        <div class="max-w-[1280px] lg:flex lg:justify-between gap-x-20 py-16 ">
+        <div class="max-w-[1280px] mx-auto lg:flex lg:justify-between gap-x-20 py-16 ">
             <div class="mx-auto max-w-[600px]">
                 
                 <a class="lora-semibold" href="">Connect</a>
