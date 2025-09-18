@@ -1,5 +1,5 @@
-<footer class="bg-[var(--main-bg)] py-12 px-5 lg:p-20 mx-auto no-print"> 
-    <section class="mx-auto  max-w-[1440px] flex flex-col items-center justify-center pb-12 border-b border-black lg:justify-between lg:flex-row gap-y-12">
+<footer class="bg-[var(--main-bg)] py-12 no-print"> 
+    <section class="max-w-[1312px] px-5 lg:px-0 lg:py-20  mx-auto flex flex-col items-center justify-center pb-12 border-b border-black lg:justify-between lg:flex-row gap-y-12">
         <div class="flex justify-start lg:w-1/3"> 
                 <a href="/" class="">
                     <?php
