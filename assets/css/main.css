@@ -750,6 +750,14 @@ video {
   height: 3rem;
 }
 
+.h-\[400px\] {
+  height: 400px;
+}
+
+.max-h-\[400px\] {
+  max-height: 400px;
+}
+
 .w-4 {
   width: 1rem;
 }
@@ -768,6 +776,22 @@ video {
 
 .w-\[600px\] {
   width: 600px;
+}
+
+.w-\[720px\] {
+  width: 720px;
+}
+
+.w-\[400px\] {
+  width: 400px;
+}
+
+.w-\[470px\] {
+  width: 470px;
+}
+
+.w-1\/2 {
+  width: 50%;
 }
 
 .max-w-\[107px\] {
@@ -812,6 +836,18 @@ video {
 
 .max-w-\[1312px\] {
   max-width: 1312px;
+}
+
+.max-w-\[560x\] {
+  max-width: 560x;
+}
+
+.max-w-\[560px\] {
+  max-width: 560px;
+}
+
+.max-w-\[720px\] {
+  max-width: 720px;
 }
 
 .-translate-x-0 {
@@ -880,6 +916,10 @@ video {
 
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-12 {
+  gap: 3rem;
 }
 
 .gap-x-2 {
@@ -1058,6 +1098,34 @@ video {
   background-image: url('http://minutodeaccion.local/wp-content/uploads/2025/09/contact.webp');
 }
 
+.bg-\[url\(\'http\:\/\/minutodeaccion\.local\/wp-content\/uploads\/2025\/09\/newsletter\.webp\'\)\] {
+  background-image: url('http://minutodeaccion.local/wp-content/uploads/2025/09/newsletter.webp');
+}
+
+.bg-\[url\(\'http\:\/\/minutodeaccion\.local\/wp-content\/uploads\/2025\/09\/news-letter-opt\.webp\'\)\] {
+  background-image: url('http://minutodeaccion.local/wp-content/uploads/2025/09/news-letter-opt.webp');
+}
+
+.bg-\[url\(\'http\:\/\/minutodeaccion\.local\/wp-content\/uploads\/2025\/09\/news-letter-full\.webp\'\)\] {
+  background-image: url('http://minutodeaccion.local/wp-content/uploads/2025/09/news-letter-full.webp');
+}
+
+.bg-\[url\(\'http\:\/\/minutodeaccion\.local\/wp-content\/uploads\/2025\/09\/newsletter-full\.webp\'\)\] {
+  background-image: url('http://minutodeaccion.local/wp-content/uploads/2025/09/newsletter-full.webp');
+}
+
+.bg-\[url\(\'http\:\/\/minutodeaccion\.local\/wp-content\/uploads\/2025\/09\/thankyou\.webp\'\)\] {
+  background-image: url('http://minutodeaccion.local/wp-content/uploads/2025/09/thankyou.webp');
+}
+
+.bg-\[url\(\'http\:\/\/minutodeaccion\.local\/wp-content\/uploads\/2025\/09\/thankyou-e1758234107635\.webp\'\)\] {
+  background-image: url('http://minutodeaccion.local/wp-content/uploads/2025/09/thankyou-e1758234107635.webp');
+}
+
+.bg-\[url\(\'http\:\/\/minutodeaccion\.local\/wp-content\/uploads\/2025\/09\/thankyou-e1758234444145\.webp\'\)\] {
+  background-image: url('http://minutodeaccion.local/wp-content/uploads/2025/09/thankyou-e1758234444145.webp');
+}
+
 .bg-cover {
   background-size: cover;
 }
@@ -1066,9 +1134,29 @@ video {
   background-position: center;
 }
 
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.object-fill {
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.object-none {
+  -o-object-fit: none;
+     object-fit: none;
+}
+
+.object-center {
+  -o-object-position: center;
+     object-position: center;
 }
 
 .p-0 {
@@ -1176,6 +1264,11 @@ video {
 .py-20 {
   padding-top: 5rem;
   padding-bottom: 5rem;
+}
+
+.py-28 {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
 }
 
 .pb-10 {
@@ -1396,6 +1489,14 @@ video {
 .text-slate-800 {
   --tw-text-opacity: 1;
   color: rgb(30 41 59 / var(--tw-text-opacity, 1));
+}
+
+.text-\[var\(--footer-cta\)\] {
+  color: var(--footer-cta);
+}
+
+.text-\[var\(--footer-cta-bg\)\] {
+  color: var(--footer-cta-bg);
 }
 
 .underline {
@@ -1793,6 +1894,10 @@ video {
     max-width: 600px;
   }
 
+  .lg\:max-w-\[560x\] {
+    max-width: 560x;
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
@@ -1807,6 +1912,11 @@ video {
 
   .lg\:justify-between {
     justify-content: space-between;
+  }
+
+  .lg\:gap-x-20 {
+    -moz-column-gap: 5rem;
+         column-gap: 5rem;
   }
 
   .lg\:p-20 {
