@@ -1982,6 +1982,10 @@ video {
     padding-top: 2rem;
   }
 
+  .lg\:pt-3 {
+    padding-top: 0.75rem;
+  }
+
   .lg\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
