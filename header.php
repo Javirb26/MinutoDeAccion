@@ -15,7 +15,7 @@
 <body x-data="{ open: false, click: false, faqOpen1: false, faqOpen2: false, faqOpen3: false }">
     
 <!-- Desktop Navigation -->
-<nav id="desktopNav" class="sticky top-0 hidden md:block bg-[var(--main-bg)] shadow-md no-print">
+<nav id="desktopNav" class="sticky top-0 z-50 hidden md:block bg-[var(--main-bg)] shadow-md no-print">
     <div class="flex items-center justify-between py-4 px-5 lg:px-16 max-w-[1440px] mx-auto">
         <div class="flex items-center">
             <div> 
