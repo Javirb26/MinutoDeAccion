@@ -130,7 +130,7 @@
         <div class="pb-16 mx-auto text-center">
             <h4 class="pb-3 text-2xl lg:text-4xl gilda">Still have questions?</h4>
             <p class="lora lg:text-lg leading-[160%] pb-6">We're here to help!</p>
-            <a class="lora-medium bg-[var(--footer-cta-bg)] hover:bg-white transition-all text-white hover:text-black hover:border hover:border-[var(--footer-cta-bg)] px-6 py-3 rounded-xl" href="#">Contact</a>
+            <a class="lora-medium bg-[var(--footer-cta-bg)] hover:bg-white transition-all text-white hover:text-black hover:border hover:border-[var(--footer-cta-bg)] px-6 py-3 rounded-xl" href="/contact/">Contact</a>
         </div>
      </section>
      <!-- CTA Section -->
@@ -140,7 +140,7 @@
               <h2 class="text-4xl lg:text-[52px]  gilda leading-[120%]  ">Join Our Community Today!</h2> 
               <p class="lora leading-[160%] text-lg">Stay updated with our latest insights and tips for personal growth. Subscribe now!</p>
 
-                <a href="" class="p-4 text-black transition-all bg-white border border-white rounded-xl hover:bg-transparent hover:text-white hover:scale-110">Join the Newsletter</a>
+                <a href="/newsletter/" class="p-4 text-black transition-all bg-white border border-white rounded-xl hover:bg-transparent hover:text-white hover:scale-110">Join the Newsletter</a>
 
             </div>
 

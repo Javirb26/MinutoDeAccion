@@ -7,7 +7,7 @@
         the_post(); ?>
             <div class="flex flex-col mx-auto mb-12 lg:flex-row lg:justify-between max-w-[1280px]">
                 <div class="lg:max-w-[420px] mb-2">
-                    <div class="mb-6"><a class="lora-semibold"  href="#">Blog</a></div>
+                    <div class="mb-6"><a class="lora-semibold"  href="/catergory/">Blog</a></div>
                     <h2 class="text-4xl lg:text-[52px] gilda leading-[120%]"><?php the_title() ?></h2>
                     <p class="pt-8 lora">By <strong>Fernando Alvarez</strong></p>
                     <p class="pt-2 mb-4 text-sm font-light lora-semibold">
@@ -62,7 +62,7 @@
               <h2 class="text-4xl lg:text-[52px] gilda leading-[120%]">Join Our Community Today!</h2> 
               <p class="lora leading-[160%] text-lg">Stay updated with our latest insights and tips for personal growth. Subscribe now!</p>
 
-                <a href="" class="p-4 text-black transition-all bg-white border border-white rounded-xl hover:bg-transparent hover:text-white hover:scale-110">Join the Newsletter</a>
+                <a href="/newsletter/" class="p-4 text-black transition-all bg-white border border-white rounded-xl hover:bg-transparent hover:text-white hover:scale-110">Join the Newsletter</a>
 
             </div>
 

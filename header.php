@@ -40,7 +40,7 @@
         </div>
         
         <div>
-            <a class="px-4 py-3 hover:bg-yellow-50 rounded-full border border-[var(--olive)] bg-[var(--olive)] text-white hover:text-[var(--olive)] transition-all duration-100" href="#">Join the Newsletter</a>
+            <a class="px-4 py-3 hover:bg-yellow-50 rounded-full border border-[var(--olive)] bg-[var(--olive)] text-white hover:text-[var(--olive)] transition-all duration-100" href="/newsletter">Join the Newsletter</a>
         </div>
     </div>
 </nav>

@@ -1,6 +1,6 @@
 <footer class="bg-[var(--main-bg)] py-12 no-print"> 
-    <section class="max-w-[1312px] px-5 lg:px-0 lg:py-20  mx-auto flex flex-col items-center justify-center pb-12 border-b border-black lg:justify-between lg:flex-row gap-y-12">
-        <div class="flex justify-start lg:w-1/3"> 
+    <section class="max-w-[1440px] px-5 lg:px-20 lg:py-20 mx-auto flex flex-col items-center justify-center pb-12 lg:justify-between lg:flex-row gap-y-12">
+        <div class="flex justify-start lg:w-[140px]"> 
                 <a href="/" class="">
                     <?php
                         if ( function_exists( 'the_custom_logo' ) ) {
@@ -10,7 +10,7 @@
                 </a>
                 
         </div>
-        <nav class="flex justify-center lg:w-1/3 " aria-label="Footer Navigation">
+        <nav class="flex items-center" aria-label="Footer Navigation">
             <?php
             wp_nav_menu([
             'theme_location' => 'footer_menu',
@@ -21,7 +21,7 @@
             ]);
         ?>
         </nav>
-        <nav class="flex justify-end lg:w-1/3" aria-label="Social Menu">
+        <nav class="flex justify-end" aria-label="Social Menu">
             <?php
             wp_nav_menu([
                 'theme_location' => 'social',
@@ -33,6 +33,7 @@
             ?>
         </nav>
     </section>
+    <div class="max-w-[1312px] mx-auto border-b border-black"></div>
 
     <section class="pt-8 text-center">
         <small class="lora">&copy; 2025 Minuto de Accion</small>
