@@ -19,7 +19,7 @@
                 <h2 class="pt-3 lg:pt-4 text-4xl lg:text-[52px] gilda">Contáctanos</h2>
                 <p class="pt-5 lg:pt-6 lora lg:text-lg">¡Nos encantaría saber de ti!</p>
 
-                <?php echo do_shortcode('[contact-form-7 id="d341fe9" title="Contact form 1"]'); ?>
+                <?php echo do_shortcode('[contact-form-7 id="87cbbaf" title="Contact form 1"]'); ?>
                 
             </div>
             <div 
