@@ -100,7 +100,7 @@
       ?>
 
       <!-- latest posts -->
-      <h4 class="pl-5 mt-6 text-2xl font-light">Latest Articles</h4>
+      <h4 class="pl-5 mt-6 mb-2 text-2xl font-light">Ultimos Articulos</h4>
       <div class="flex flex-col pl-10 mt-2 gap-y-2">
         <?php
           $latest_posts = new WP_Query([
@@ -116,8 +116,8 @@
         ?>
       </div>
        <!-- newsletter cta -->
-      <a class="mt-8 flex items-center justify-center py-3 ml-5 text-2xl font-medium hover:bg-yellow-100 border border-[var(--olive)] hover:text-black text-[var(--olive)] max-w-[250px] bg-[var(--olive)] text-white rounded-full" href="/newsletter/">
-        Join our Newsletter
+      <a class="mt-8 flex items-center justify-center py-3 ml-5 text-2xl font-medium hover:bg-yellow-100 border border-[var(--olive)] hover:text-black text-[var(--olive)] max-w-[280px] bg-[var(--olive)] text-white rounded-full" href="/newsletter/">
+        Suscríbete al boletín
       </a>
     </div>
   </div>

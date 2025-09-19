@@ -3,9 +3,9 @@
         <section class="flex lg:gap-x-20 items-center w-full pl-5 transition-all duration-100 lg:pl-20 max-w-[1440px] mx-auto">
         <div class="max-w-[720px] py-16">
             <div class="max-w-[560px]">
-                <h1 class="text-5xl lg:text-7xl gilda leading-[120%] pt-3 lg:pt-4">Join our Community!</h1>
+                <h1 class="text-5xl lg:text-7xl gilda leading-[120%] pt-3 lg:pt-4">¡Únete a nuestra comunidad</h1>
                 <!-- <p class="pb-3 italic text-md font-extralight gilda"><q>Cree en ti y haz que suceda en todas las cosas</q></p> -->
-                <p class="pt-2 lg:pt-6 lora lg:text-lg leading-[160%]">We're excited to have you on board! Look out for our latest insights and tips delivered straight to your inbox.</p>
+                <p class="pt-2 lg:pt-6 lora lg:text-lg leading-[160%]">¡Nos entusiasma tenerte a bordo! Mantente al tanto de nuestras últimas novedades y consejos, directamente en tu bandeja de entrada.</p>
             </div>
         </div>
         <div 
@@ -17,8 +17,8 @@
     <section class="px-4 lg:px-20 pt-20 pb-16 bg-[var(--main-bg)] ">
         <div class="mx-auto max-w-[1440px]">
             <div class="max-w-[768px] mx-auto lg:mx-0 pb-12 lg:pb-20">
-                <h3 class="text-[32px] lg:text-4xl font-semibold gilda">Thank You for Subscribing to Our Exclusive Newsletter!</h3>
-                <p class="pt-2 lora lg:text-lg leading-[160%]">We appreciate your subscription! As a valued member, you will receive exclusive content tailored just for you. Stay tuned for early access to our latest posts and special offers that you won't want to miss.</p>
+                <h3 class="text-[32px] lg:text-4xl font-semibold gilda">¡Gracias por suscribirte a nuestro boletín exclusivo</h3>
+                <p class="pt-2 lora lg:text-lg leading-[160%]">¡Agradecemos tu suscripción! Como miembro valioso, recibirás contenido exclusivo diseñado especialmente para ti. Mantente al tanto para acceder anticipadamente a nuestras últimas publicaciones y ofertas especiales que no te querrás perder.</p>
             </div>
     
             <div class="flex flex-col lg:flex-row items-center justify-center lg:justify-between max-w-[1400px] gap-12">
@@ -28,9 +28,9 @@
                     </svg>
     
                     <h5 class="text-[28px] leading-[140%] gilda">
-                        Unlock Exclusive Insights and Early Access to Our Best Content!
+                        ¡Descubre información exclusiva y acceso anticipado a nuestro mejor contenido
                     </h5>
-                    <p class="text-base lora">Your journey to personal growth starts here.</p>
+                    <p class="text-base lora">Tu camino hacia el crecimiento personal empieza aquí.</p>
     
                 </div>
                 <div class="flex flex-col text-left gap-y-6 max-w-[400px] lg:h-[323px]">
@@ -40,9 +40,9 @@
                     </svg>
     
                     <h5 class="text-[28px] leading-[140%] gilda">
-                        Enjoy Special Offers and Content Just for Subscribers!
+                        ¡Disfruta de ofertas especiales y contenido solo para suscriptores!
                     </h5>
-                    <p class="text-base lora">Don't miss out on exclusive deals and insights.</p>
+                    <p class="text-base lora">No te pierdas ofertas e información exclusiva.</p>
     
                 </div>
                 <div class="flex flex-col text-left gap-y-6 max-w-[400px] lg:h-[323px]">
@@ -52,9 +52,9 @@
                     </svg>
     
                     <h5 class="text-[28px] leading-[140%] gilda">
-                        Be the First to Know About New Posts and Updates!
+                        ¡Sea el primero en enterarse de nuevas publicaciones y actualizaciones!
                     </h5>
-                    <p class="text-base lora">Stay ahead with timely updates delivered straight to your inbox.</p>
+                    <p class="text-base lora">Manténgase a la vanguardia con actualizaciones oportunas enviadas directamente a su bandeja de entrada.</p>
                     
                 </div>
             </div>
@@ -66,9 +66,9 @@
         <div class="max-w-[1280px] mx-auto lg:flex lg:justify-between gap-x-20 py-16 ">
             <div class="mx-auto max-w-[600px]">
                 
-                <p class="lora-semibold">Join</a>
-                <h2 class="pt-3 lg:pt-4 text-4xl lg:text-[52px] gilda leading-[120%]">Join the Newsletter Today!</h2>
-                <p class="pt-4 lg:pt-3 lora lg:text-lg">Enjoy the latest insights and tips straight to you inbox!</p>
+                <p class="lora-semibold">Únete</a>
+                <h2 class="pt-3 lg:pt-4 text-4xl lg:text-[52px] gilda leading-[120%]">¡Suscríbete al boletín hoy!</h2>
+                <p class="pt-4 lg:pt-3 lora lg:text-lg">¡Disfruta de los últimos conocimientos y consejos directamente en tu bandeja de entrada!</p>
 
                     <?php echo do_shortcode("[newsletter_form confirmation_url='/welcome/' optin='single' ]") ?>
 
