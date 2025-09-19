@@ -15,7 +15,7 @@ $posts_page_url = get_permalink($posts_page_id);
         id="hero" 
         class="relative px-5 md:px-20 h-[812px] md:h-[900px] bg-center bg-cover 
     
-    bg-[url('http://minutodeaccion.local/wp-content/uploads/2025/09/hero-section-image-scaled.webp')] "
+    bg-[url('https://minutodeaccion.com/wp-content/uploads/2025/09/hero-section-image-scaled-1.webp')] "
     
     >
         <div class="flex flex-col justify-center h-full text-white lg:max-w-[560px]">

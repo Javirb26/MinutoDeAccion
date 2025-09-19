@@ -23,7 +23,7 @@
                 
             </div>
             <div 
-                class="hidden lg:flex w-[600px] h-[700px] rounded-2xl object-cover bg-center bg-[url('http://minutodeaccion.local/wp-content/uploads/2025/09/contact.webp')]">
+                class="hidden lg:flex w-[600px] h-[700px] rounded-2xl object-cover bg-center bg-[url('https://minutodeaccion.com/wp-content/uploads/2025/09/contact-1.webp')]">
             </div>
         </div>
     </section>

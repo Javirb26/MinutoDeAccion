@@ -1074,6 +1074,22 @@ video {
   background-image: url('http://minutodeaccion.local/wp-content/uploads/2025/09/thankyou-e1758234444145.webp');
 }
 
+.bg-\[url\(\'https\:\/\/minutodeaccion\.com\/wp-content\/uploads\/2025\/09\/hero-section-image-scaled-1\.webp\'\)\] {
+  background-image: url('https://minutodeaccion.com/wp-content/uploads/2025/09/hero-section-image-scaled-1.webp');
+}
+
+.bg-\[url\(\'https\:\/\/minutodeaccion\.com\/wp-content\/uploads\/2025\/09\/contact-1\.webp\'\)\] {
+  background-image: url('https://minutodeaccion.com/wp-content/uploads/2025/09/contact-1.webp');
+}
+
+.bg-\[url\(\'https\:\/\/minutodeaccion\.com\/wp-content\/uploads\/2025\/09\/news-letter-opt\.webp\'\)\] {
+  background-image: url('https://minutodeaccion.com/wp-content/uploads/2025/09/news-letter-opt.webp');
+}
+
+.bg-\[url\(\'https\:\/\/minutodeaccion\.com\/wp-content\/uploads\/2025\/09\/thankyou-e1758234444145\.webp\'\)\] {
+  background-image: url('https://minutodeaccion.com/wp-content/uploads/2025/09/thankyou-e1758234444145.webp');
+}
+
 .bg-cover {
   background-size: cover;
 }

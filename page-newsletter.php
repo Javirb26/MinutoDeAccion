@@ -9,7 +9,7 @@
             </div>
         </div>
         <div 
-            class="hidden lg:flex w-[720px] h-[700px] object-cover bg-center bg-[url('http://minutodeaccion.local/wp-content/uploads/2025/09/news-letter-opt.webp')]">
+            class="hidden lg:flex w-[720px] h-[700px] object-cover bg-center bg-[url('https://minutodeaccion.com/wp-content/uploads/2025/09/news-letter-opt.webp')]">
         </div>
     </section>
 

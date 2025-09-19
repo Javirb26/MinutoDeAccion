@@ -13,7 +13,7 @@
             </div>
         </div>
         <div 
-            class="hidden lg:flex w-[600px] h-[400px] bg-cover bg-center rounded-xl bg-[url('http://minutodeaccion.local/wp-content/uploads/2025/09/thankyou-e1758234444145.webp')]">
+            class="hidden lg:flex w-[600px] h-[400px] bg-cover bg-center rounded-xl bg-[url('https://minutodeaccion.com/wp-content/uploads/2025/09/thankyou-e1758234444145.webp')]">
         </div>
     </section>
 </main>
