@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head() ?> 
+    <meta name="description" content="Inspiring motivational stories, practical tips, and uplifting messages to help you stay positive and achieve your goals.">
+    <meta name="keywords" content="motivation, inspiration, personal growth, self improvement, positivity, success, lifestyle">
     <script defer src="https://unpkg.com/alpinejs" ></script>
     <style>[x-cloak] { display: none !important; }</style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
