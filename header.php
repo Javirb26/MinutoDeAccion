@@ -47,79 +47,78 @@
     </div>
 </nav>
 
-<!-- Mobile navigation -->
-<nav id="mobileNav" class="sticky top-0 block md:hidden no-print">
-    <div class="flex items-center justify-between h-20 px-5 bg-[var(--main-bg)]">
-        <div class="flex items-center"> 
-                <a href="/" class="">
-                    <?php
-                        if ( function_exists( 'the_custom_logo' ) ) {
-                            the_custom_logo();
-                        }
-                    ?>
-                </a>
-                <a class="text-[var(--olive)] text-2xl font-medium ml-5" href="/">Minuto De Accion</a>
-        </div>
-        <div class="flex justify-end">
-            <!-- Hamburger Menu -->
-            <button @click="open = !open" :class=" open ? 'hidden' : 'block' " id="open" class="text-green-500">
-                <svg xmlns="http://www.w3.org/2000/svg" height="38px" viewBox="0 -960 960 960" width="38px" fill="#000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
-            </button>
-
-            <!-- Close Menu -->
-            <button x-cloak x-show="open" @click="open = !open" :class=" open ? 'block' : 'hidden' " id="close" class="text-red-500">
-                <svg xmlns="http://www.w3.org/2000/svg" height="38px" viewBox="0 -960 960 960" width="38px" fill="#000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-            </button>
-            
-        </div>
+<nav id="mobileNav" class="sticky top-0 md:hidden no-print z-50 bg-[var(--main-bg)]">
+  <!-- Top bar -->
+  <div class="flex items-center justify-between h-20 px-5">
+    <div class="flex items-center">
+      <a href="/" class="">
+        <?php if ( function_exists('the_custom_logo') ) the_custom_logo(); ?>
+      </a>
+      <a class="text-[var(--olive)] text-2xl font-medium ml-5" href="/">Minuto De Accion</a>
     </div>
-    
 
-    <div 
-        x-cloak
-        x-show="open"
-        x-transition:enter="transition transform ease-out duration-100"
-        x-transition:enter-start="opacity-0 translate-x-full"
-        x-transition:enter-end="opacity-100 -translate-x-0"
-
-        x-transition:leave="transition transform ease-in duration-100"
-        x-transition:leave-start="opacity-100 -translate-x-0"
-        x-transition:leave-end="opacity-0 translate-x-full"
-        class="pt-6 flex flex-col absolute top-[126px] left-0 w-full main-mobile-nav h-screen z-20 bg-[var(--main-bg)] gap-y-3"
+    <!-- Single toggle button -->
+    <button
+      @click="open = !open"
+      :aria-expanded="open.toString()"
+      aria-controls="mobileMenu"
+      class="p-2"
     >
+      <!-- hamburger -->
+      <svg x-cloak x-show="!open" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 -960 960 960" fill="currentColor">
+        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+      </svg>
+      <!-- close -->
+      <svg x-cloak x-show="open" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 -960 960 960" fill="currentColor">
+        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Slide-over panel -->
+  <div
+    id="mobileMenu"
+    x-cloak
+    x-show="open"
+    @keydown.escape.window="open=false"
+    x-transition:enter="transition transform ease-out duration-200"
+    x-transition:enter-start="opacity-0 translate-x-full"
+    x-transition:enter-end="opacity-100 translate-x-0"
+    x-transition:leave="transition transform ease-in duration-150"
+    x-transition:leave-start="opacity-100 translate-x-0"
+    x-transition:leave-end="opacity-0 translate-x-full"
+    class="fixed inset-x-0 top-20 bottom-0 z-50 bg-[var(--main-bg)] overflow-y-auto"
+  >
+    <div class="pt-6 pb-10">
+      <?php
+      wp_nav_menu([
+        'theme_location' => 'primary',
+        'container'      => false,
+        'menu_class'     => 'flex flex-col gap-y-4 px-5 text-2xl',
+        'fallback_cb'    => false,
+      ]);
+      ?>
+
+      <!-- latest posts -->
+      <h4 class="pl-5 mt-6 text-2xl font-light">Latest Articles</h4>
+      <div class="flex flex-col pl-10 mt-2 gap-y-2">
         <?php
-        wp_nav_menu([
-            'theme_location' => 'primary',
-            'container'      => false,
-            'menu_class'     => 'flex flex-col gap-y-4',
-            'fallback_cb'    => false,
-        ]);
+          $latest_posts = new WP_Query([
+            'posts_per_page' => 3,
+            'post_status'    => 'publish',
+          ]);
+          while ($latest_posts->have_posts()) { $latest_posts->the_post(); ?>
+            <ul class="flex items-center list-disc gap-x-3">
+              <li class="mb-2"><a class="text-xl font-semibold hover:text-[var(--olive)]" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+            </ul>
+        <?php }
+          wp_reset_postdata();
         ?>
-        <!-- newsletter cta -->
-        <a class="block py-2 pl-5 text-3xl font-medium hover:underline text-[var(--olive)]" href="">Join our Newsletter</a>
-
-        
-
-        <!-- lastest posts -->
-        <h4 class="pl-5 text-2xl font-light">Latest Articles</h4>
-        <div class="flex flex-col pl-10 gap-y-2">
-            <?php 
-                $latest_posts = new WP_Query([
-                    'posts_per_page' => 3, // limit to 3
-                    'post_status'    => 'publish', // only published posts
-                ]);
-
-            while ($latest_posts->have_posts()) {
-                $latest_posts->the_post(); ?>
-                <div class="flex items-center gap-x-3">
-                    <span class="flex items-center">    
-                        *
-                    </span>
-                    <a class="text-2xl font-semibold hover:text-[var(--olive)]" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                </div>
-            <?php }
-            wp_reset_postdata(); // reset to the main query
-            ?>   
-        </div>
+      </div>
+       <!-- newsletter cta -->
+      <a class="mt-8 flex items-center justify-center py-3 ml-5 text-2xl font-medium hover:bg-yellow-100 border border-[var(--olive)] hover:text-black text-[var(--olive)] max-w-[250px] bg-[var(--olive)] text-white rounded-full" href="/newsletter/">
+        Join our Newsletter
+      </a>
     </div>
+  </div>
 </nav>
