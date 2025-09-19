@@ -273,11 +273,17 @@ div.tnp-subscription {
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
 }
 
-.menu-item a {
-  font-size: 2rem !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  margin-top: 28px !important;
+footer a {
+  font-size: 18px !important;
+}
+
+@media screen and (max-width: 767px) {
+ .menu-item a {
+    font-size: 2rem;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-top: 28px !important;
+  }
 }
 
 #menu-navigation-1 {
