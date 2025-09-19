@@ -1,6 +1,6 @@
 <?php get_header() ?>
 
-<main x-data="{ click: false, faqOpen1: false, faqOpen2: false, faqOpen3: false, }" class="flex flex-col w-full mx-auto bg-slate-50">
+<main class="flex flex-col w-full mx-auto bg-slate-50">
 
     <section class="flex flex-col w-full px-5 py-16 transition-all duration-100 lg:py-28 lg:px-20 lg:max-w-[768px]">
         <p class="lora-semibold">Inspiration</p>
@@ -92,8 +92,8 @@
             <details @click="faqOpen1 = !faqOpen1" class="pb-5 border-t cursor-pointer">
                 <summary class="flex items-center justify-between py-5 list-none lora-bold">What is this blog? 
                     <span>
-                        <svg :class="faqOpen1 ? 'rotate-0 transition-all ease-in-out' : 'rotate-180 transition-all ease-in-out' " width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.85352 1.60791C7.97858 1.60791 8.07879 1.64574 8.18555 1.75244L14.7783 8.34424C14.8875 8.45346 14.9228 8.55216 14.9229 8.66846C14.9229 8.78476 14.8874 8.88346 14.7783 8.99268C14.6743 9.09672 14.5718 9.13711 14.4375 9.13721C14.303 9.13721 14.1999 9.09684 14.0957 8.99268L14.0947 8.9917L8.32422 3.25342L7.85254 2.78467L1.61133 9.02588C1.50767 9.12953 1.41904 9.15869 1.31152 9.15479C1.18583 9.15019 1.07763 9.10742 0.962891 8.99268C0.858743 8.88852 0.818359 8.78638 0.818359 8.65186C0.818372 8.51735 0.85874 8.41519 0.962891 8.31104L7.52148 1.75244C7.62824 1.64568 7.72848 1.60795 7.85352 1.60791Z" fill="#040709" stroke="#040709" stroke-width="1.33333"/>
+                        <svg :class="faqOpen1 ? 'rotate-180 transition-all ease-in-out' : 'rotate-0 transition-all ease-in-out' " xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none">
+                            <path d="M7.85449 9.06348C7.72943 9.06348 7.62922 9.02564 7.52246 8.91895L0.929688 2.32715C0.820517 2.21793 0.785182 2.11923 0.785156 2.00293C0.785156 1.88662 0.820578 1.78792 0.929688 1.67871C1.03373 1.57466 1.1362 1.53427 1.27051 1.53418C1.40505 1.53418 1.50814 1.57454 1.6123 1.67871L1.61328 1.67969L7.38379 7.41797L7.85547 7.88672L14.0967 1.64551C14.2003 1.54185 14.289 1.51269 14.3965 1.5166C14.5222 1.5212 14.6304 1.56397 14.7451 1.67871C14.8493 1.78287 14.8896 1.885 14.8896 2.01953C14.8896 2.15404 14.8493 2.2562 14.7451 2.36035L8.18652 8.91895C8.07977 9.0257 7.97953 9.06344 7.85449 9.06348Z" fill="#040709" stroke="#040709" stroke-width="1.33333"/>
                         </svg>
                     </span>
                 </summary>
@@ -104,8 +104,8 @@
             <details @click="faqOpen2 = !faqOpen2" class="pb-5 border-t cursor-pointer">
                 <summary class="flex items-center justify-between py-5 list-none lora-bold">How to Navigate? 
                     <span>
-                        <svg :class="faqOpen2 ? 'rotate-0 transition-all ease-in-out' : 'rotate-180 transition-all ease-in-out' " width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.85352 1.60791C7.97858 1.60791 8.07879 1.64574 8.18555 1.75244L14.7783 8.34424C14.8875 8.45346 14.9228 8.55216 14.9229 8.66846C14.9229 8.78476 14.8874 8.88346 14.7783 8.99268C14.6743 9.09672 14.5718 9.13711 14.4375 9.13721C14.303 9.13721 14.1999 9.09684 14.0957 8.99268L14.0947 8.9917L8.32422 3.25342L7.85254 2.78467L1.61133 9.02588C1.50767 9.12953 1.41904 9.15869 1.31152 9.15479C1.18583 9.15019 1.07763 9.10742 0.962891 8.99268C0.858743 8.88852 0.818359 8.78638 0.818359 8.65186C0.818372 8.51735 0.85874 8.41519 0.962891 8.31104L7.52148 1.75244C7.62824 1.64568 7.72848 1.60795 7.85352 1.60791Z" fill="#040709" stroke="#040709" stroke-width="1.33333"/>
+                        <svg :class="faqOpen2 ? 'rotate-180 transition-all ease-in-out' : 'rotate-0 transition-all ease-in-out' " xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none">
+                            <path d="M7.85449 9.06348C7.72943 9.06348 7.62922 9.02564 7.52246 8.91895L0.929688 2.32715C0.820517 2.21793 0.785182 2.11923 0.785156 2.00293C0.785156 1.88662 0.820578 1.78792 0.929688 1.67871C1.03373 1.57466 1.1362 1.53427 1.27051 1.53418C1.40505 1.53418 1.50814 1.57454 1.6123 1.67871L1.61328 1.67969L7.38379 7.41797L7.85547 7.88672L14.0967 1.64551C14.2003 1.54185 14.289 1.51269 14.3965 1.5166C14.5222 1.5212 14.6304 1.56397 14.7451 1.67871C14.8493 1.78287 14.8896 1.885 14.8896 2.01953C14.8896 2.15404 14.8493 2.2562 14.7451 2.36035L8.18652 8.91895C8.07977 9.0257 7.97953 9.06344 7.85449 9.06348Z" fill="#040709" stroke="#040709" stroke-width="1.33333"/>
                         </svg>
                     </span>
                 </summary>
@@ -116,8 +116,8 @@
             <details @click="faqOpen3 = !faqOpen3" class="pb-5 border-t border-b cursor-pointer">
                 <summary class="flex items-center justify-between py-5 list-none lora-bold">How to subscribe? 
                     <span>
-                        <svg :class="faqOpen3 ? 'rotate-0 transition-all ease-in-out' : 'rotate-180 transition-all ease-in-out' " width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.85352 1.60791C7.97858 1.60791 8.07879 1.64574 8.18555 1.75244L14.7783 8.34424C14.8875 8.45346 14.9228 8.55216 14.9229 8.66846C14.9229 8.78476 14.8874 8.88346 14.7783 8.99268C14.6743 9.09672 14.5718 9.13711 14.4375 9.13721C14.303 9.13721 14.1999 9.09684 14.0957 8.99268L14.0947 8.9917L8.32422 3.25342L7.85254 2.78467L1.61133 9.02588C1.50767 9.12953 1.41904 9.15869 1.31152 9.15479C1.18583 9.15019 1.07763 9.10742 0.962891 8.99268C0.858743 8.88852 0.818359 8.78638 0.818359 8.65186C0.818372 8.51735 0.85874 8.41519 0.962891 8.31104L7.52148 1.75244C7.62824 1.64568 7.72848 1.60795 7.85352 1.60791Z" fill="#040709" stroke="#040709" stroke-width="1.33333"/>
+                        <svg :class="faqOpen3 ? 'rotate-180 transition-all ease-in-out' : 'rotate-0 transition-all ease-in-out' " xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none">
+                            <path d="M7.85449 9.06348C7.72943 9.06348 7.62922 9.02564 7.52246 8.91895L0.929688 2.32715C0.820517 2.21793 0.785182 2.11923 0.785156 2.00293C0.785156 1.88662 0.820578 1.78792 0.929688 1.67871C1.03373 1.57466 1.1362 1.53427 1.27051 1.53418C1.40505 1.53418 1.50814 1.57454 1.6123 1.67871L1.61328 1.67969L7.38379 7.41797L7.85547 7.88672L14.0967 1.64551C14.2003 1.54185 14.289 1.51269 14.3965 1.5166C14.5222 1.5212 14.6304 1.56397 14.7451 1.67871C14.8493 1.78287 14.8896 1.885 14.8896 2.01953C14.8896 2.15404 14.8493 2.2562 14.7451 2.36035L8.18652 8.91895C8.07977 9.0257 7.97953 9.06344 7.85449 9.06348Z" fill="#040709" stroke="#040709" stroke-width="1.33333"/>
                         </svg>
                     </span>
                 </summary>
@@ -130,7 +130,7 @@
         <div class="pb-16 mx-auto text-center">
             <h4 class="pb-3 text-2xl lg:text-4xl gilda">Still have questions?</h4>
             <p class="lora lg:text-lg leading-[160%] pb-6">We're here to help!</p>
-            <a class="lora-medium bg-[var(--footer-cta-bg)] hover:bg-white transition-all text-white hover:text-black hover:border hover:border-[var(--footer-cta-bg)] px-6 py-3 rounded-xl" href="#">Contact</a>
+            <a class="lora-medium bg-[var(--footer-cta-bg)] hover:bg-white transition-all text-white hover:text-black hover:border hover:border-[var(--footer-cta-bg)] px-6 py-3 rounded-xl" href="/contact/">Contact</a>
         </div>
      </section>
      <!-- CTA Section -->
@@ -140,7 +140,7 @@
               <h2 class="text-4xl lg:text-[52px]  gilda leading-[120%]  ">Join Our Community Today!</h2> 
               <p class="lora leading-[160%] text-lg">Stay updated with our latest insights and tips for personal growth. Subscribe now!</p>
 
-                <a href="" class="p-4 text-black transition-all bg-white border border-white rounded-xl hover:bg-transparent hover:text-white hover:scale-110">Join the Newsletter</a>
+                <a href="/newsletter/" class="p-4 text-black transition-all bg-white border border-white rounded-xl hover:bg-transparent hover:text-white hover:scale-110">Join the Newsletter</a>
 
             </div>
 
