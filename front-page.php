@@ -143,7 +143,7 @@ $posts_page_url = get_permalink($posts_page_id);
 
         <!-- viewmore button -->
         <div class="mt-12 mb-16 lg:mb-24">
-            <a class="lora-medium leading-[160%] px-6 py-[10px] rounded-xl bg-[var(--main-bg)] hover:bg-white transition-all duration-100 border" href="#">View all</a>
+            <a class="lora-medium leading-[160%] px-6 py-[10px] rounded-xl bg-[var(--main-bg)] hover:bg-white transition-all duration-100 border" href="/catergory/">View all</a>
         </div>
     </section>
 
@@ -154,7 +154,7 @@ $posts_page_url = get_permalink($posts_page_id);
               <h2 class="text-4xl lg:text-[52px]  gilda leading-[120%]  ">Join Our Community Today!</h2> 
               <p class="lora leading-[160%] text-lg">Stay updated with our latest insights and tips for personal growth. Subscribe now!</p>
 
-                <a href="" class="p-4 text-black bg-white rounded-xl">Join the Newsletter</a>
+                <a href="/newsletter/" class="p-4 text-black bg-white rounded-xl">Join the Newsletter</a>
 
             </div>
 

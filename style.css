@@ -10,6 +10,7 @@ Theme Name: Minuto De Accion
     --olive-dark: #3b4939;
     --main-bg: #FFF7CC;
     --footer-cta-bg: #665600;
+    --lora: "Lora", serif;
 }
 
 
@@ -150,6 +151,7 @@ div a.button__link {
   max-width: 222px;
 }
 
+/* download pdf post print styles */
 @media print {
   header, nav, footer, .sidebar, .ad, .no-print {
     display: none !important;
@@ -172,3 +174,118 @@ div a.button__link {
 
   h1, h2, h3 { break-after: avoid; }
 } 
+
+
+/* Contact form submit button styles */
+#cf7-submit {
+  background-color: var(--footer-cta-bg);
+  border: var(--footer-cta-bg) solid 1px;
+
+  transition: 
+    background-color 0.3s ease,
+    transform 150ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+#cf7-submit:hover {
+  background-color: var(--footer-cta-bg-bg);
+  color: black;
+  border: var(--footer-cta-bg) solid 1px;
+  scale: 105% 105%;
+  cursor: pointer;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+
+
+/* News letter form styles */
+div.tnp-subscription {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  margin: 0 auto 0 auto !important;
+  padding-top: 24px !important;
+  max-width: none !important;
+}
+
+@media (min-width: 1024px){
+  div.tnp div.tnp-subscription {
+    width: 600px !important;
+  }
+}
+
+/* first name */
+.tnp-field {
+  font-family: var(--lora) !important;
+}
+.tnp-field label {
+  padding-bottom: 8px !important;
+  margin: 0 !important;
+  font-size: 16px !important;
+}
+.tnp-name {
+  background-color: #fff !important;
+  height: 48px !important;
+  border: 1px solid rgb(225, 227, 232) !important; 
+  border-radius: 0.75rem !important;
+  padding-left: 8px !important;
+  
+}
+
+#tnp-1 {
+  margin-bottom: 24px !important;
+}
+
+/* email */
+.tnp-email {
+  background-color: #fff !important;
+  height: 48px !important;
+  border: 1px solid rgb(225, 227, 232) !important; 
+  border-radius: 0.75rem !important;
+  padding-left: 8px !important;
+  
+}
+
+#tnp-2 {
+  margin-bottom: 24px !important;
+}
+
+/* submit */
+.tnp-submit {
+  background-color: var(--olive) !important;
+  border: var(--olive) solid 1px !important;
+  padding: 12px 24px !important;
+  min-width: 102px !important;
+  border-radius: 0.75rem !important;
+  font-family: var(--lora);
+  font-weight: 500;
+
+  transition: 
+    background-color 0.3s ease,
+    transform 150ms cubic-bezier(0, 0, 0.2, 1) !important;
+}
+
+.tnp-submit:hover {
+  background-color: var(--main-bg) !important;
+  color: black !important;
+  border: var(--footer-cta-bg) solid 1px !important;
+  scale: 105% 105% !important;
+  cursor: pointer !important;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
+}
+
+footer a {
+  font-size: 18px !important;
+}
+
+@media screen and (max-width: 767px) {
+ .menu-item a {
+    font-size: 2rem;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-top: 28px !important;
+  }
+}
+
+#menu-navigation-1 {
+  margin-bottom: 28px !important;
+}
