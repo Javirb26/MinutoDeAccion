@@ -19,25 +19,7 @@
                 <h2 class="pt-3 lg:pt-4 text-4xl lg:text-[52px] gilda">Get in Touch</h2>
                 <p class="pt-5 lg:pt-6 lora lg:text-lg">We'd love to hear from you!</p>
 
-                <form class="flex flex-col w-full lg:w-[600px] mx-auto pt-6 lg:pt-8" action="">
-
-                    <label class="pb-2 lora" for="name">Name</label>
-                    <input class="h-12 mb-6 border rounded-xl" type="text" id="name" name="name">
-
-                    <label class="pb-2 lora" for="email">Email</label>
-                    <input class="h-12 mb-6 border rounded-xl" type="text" id="email" name="email">
-
-                    <label class="pb-2 lora" for="message">Message</label>
-                    <textarea class="h-[180px] pt mb-6 border rounded-xl pl-3 pt-3 lora" name="message" id="message" placeholder="Type your message..."></textarea>
-                    
-                    <button 
-                        class="px-6 py-3 bg-[var(--footer-cta-bg)] max-w-[102px] rounded-xl text-white hover:scale-105 transition-all hover:shadow-lg border border-[var(--footer-cta-bg)] hover:bg-[var(--main-bg)] hover:text-black lora-medium"
-                        aria-label="Send Form"
-                        type="submit">
-                            Submit
-                    </button>
-                    
-                </form>
+                <?php echo do_shortcode('[contact-form-7 id="d341fe9" title="Contact form 1"]'); ?>
                 
             </div>
             <div 

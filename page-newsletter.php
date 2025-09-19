@@ -70,23 +70,9 @@
                 <h2 class="pt-3 lg:pt-4 text-4xl lg:text-[52px] gilda leading-[120%]">Join the Newsletter Today!</h2>
                 <p class="pt-4 lg:pt-3 lora lg:text-lg">Enjoy the latest insights and tips straight to you inbox!</p>
 
-                <form class="flex flex-col w-full lg:w-[600px] mx-auto pt-6 lg:pt-8" action="">
+                    <?php echo do_shortcode("[newsletter_form confirmation_url='/contact/' optin='single' ]") ?>
 
-                    <label class="pb-2 lora" for="name">Name</label>
-                    <input class="h-12 mb-6 border rounded-xl" type="text" id="name" name="name">
 
-                    <label class="pb-2 lora" for="email">Email</label>
-                    <input class="h-12 mb-6 border rounded-xl" type="text" id="email" name="email">
-                    
-                    <button 
-                        class=" px-6 py-3 bg-[var(--olive)] max-w-[102px] rounded-xl text-white hover:scale-105 transition-all hover:shadow-lg border border-[var(--olive)] hover:bg-[var(--main-bg)] hover:text-black lora-medium"
-                        aria-label="Send Form"
-                        type="submit">
-                            Join
-                    </button>
-                    
-                </form>
-                
             </div>
             
         </div>
