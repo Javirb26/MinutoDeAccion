@@ -1,28 +1,13 @@
-// Previous Code that Toggled the Mobile Hamburger Menu before Integration of AlpineJS
+(function () {
+    let viewAll = document.getElementById("view-all");
+if (!viewAll) return;
+viewAll.addEventListener('click', function () {
+    let card = document.querySelectorAll(".card.hidden").forEach(el => el.classList.remove("hidden"));
+    this.style.display = "none;" 
+})
+})();
 
-// let mobileNav = document.querySelector(".main-mobile-nav");
-// let hamburgerMenu = document.getElementById("open");
-// let closeMenuIcon = document.getElementById("close");
 
-// let open = false;
-// let close = true;
-
-// function toggleMenu() {
-//     open = !open;
-//     close = !close;
-
-//     if (open) {
-//         mobileNav.classList.remove('hidden');
-//         hamburgerMenu.classList.add('hidden');
-//         closeMenuIcon.classList.remove('hidden');
-//     } else {
-
-//         mobileNav.classList.add('hidden');
-//         hamburgerMenu.classList.remove('hidden');
-//         closeMenuIcon.classList.add('hidden');
-//     }
-    
-// };
 
 
 
