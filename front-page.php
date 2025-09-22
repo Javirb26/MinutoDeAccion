@@ -102,7 +102,7 @@ $posts_page_url = get_permalink($posts_page_id);
                                  );
                              
                              } else { ?>
-                                 <img class="'w-[335px] lg:w-[405px] h-[221px] object-cover rounded-t-lg" src="https://images.pexels.com/photos/32946430/pexels-photo-32946430/free-photo-of-silhouette-of-person-on-a-vibrant-beach-sunset.jpeg" alt="">
+                                 <img class="'w-[335px] lg:w-[405px] h-[221px] object-cover rounded-t-lg" src="https://minutodeaccion.com/wp-content/uploads/2025/09/defaultMDA.avif" alt="">
                              <?php } ?>
      
                              <div class="flex flex-col px-4 pt-6 text-left">

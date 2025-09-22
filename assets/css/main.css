@@ -770,8 +770,8 @@ video {
   max-width: 102px;
 }
 
-.max-w-\[107px\] {
-  max-width: 107px;
+.max-w-\[115px\] {
+  max-width: 115px;
 }
 
 .max-w-\[1280px\] {
@@ -790,12 +790,12 @@ video {
   max-width: 1440px;
 }
 
-.max-w-\[250px\] {
-  max-width: 250px;
-}
-
 .max-w-\[271px\] {
   max-width: 271px;
+}
+
+.max-w-\[280px\] {
+  max-width: 280px;
 }
 
 .max-w-\[335px\] {
@@ -820,22 +820,6 @@ video {
 
 .max-w-\[768px\] {
   max-width: 768px;
-}
-
-.max-w-\[300px\] {
-  max-width: 300px;
-}
-
-.max-w-\[280px\] {
-  max-width: 280px;
-}
-
-.max-w-\[110px\] {
-  max-width: 110px;
-}
-
-.max-w-\[115px\] {
-  max-width: 115px;
 }
 
 .translate-x-0 {
@@ -1058,28 +1042,12 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.bg-\[url\(\'http\:\/\/minutodeaccion\.local\/wp-content\/uploads\/2025\/09\/contact\.webp\'\)\] {
-  background-image: url('http://minutodeaccion.local/wp-content/uploads/2025/09/contact.webp');
-}
-
-.bg-\[url\(\'http\:\/\/minutodeaccion\.local\/wp-content\/uploads\/2025\/09\/hero-section-image-scaled\.webp\'\)\] {
-  background-image: url('http://minutodeaccion.local/wp-content/uploads/2025/09/hero-section-image-scaled.webp');
-}
-
-.bg-\[url\(\'http\:\/\/minutodeaccion\.local\/wp-content\/uploads\/2025\/09\/news-letter-opt\.webp\'\)\] {
-  background-image: url('http://minutodeaccion.local/wp-content/uploads/2025/09/news-letter-opt.webp');
-}
-
-.bg-\[url\(\'http\:\/\/minutodeaccion\.local\/wp-content\/uploads\/2025\/09\/thankyou-e1758234444145\.webp\'\)\] {
-  background-image: url('http://minutodeaccion.local/wp-content/uploads/2025/09/thankyou-e1758234444145.webp');
+.bg-\[url\(\'https\:\/\/minutodeaccion\.com\/wp-content\/uploads\/2025\/09\/contact-1\.webp\'\)\] {
+  background-image: url('https://minutodeaccion.com/wp-content/uploads/2025/09/contact-1.webp');
 }
 
 .bg-\[url\(\'https\:\/\/minutodeaccion\.com\/wp-content\/uploads\/2025\/09\/hero-section-image-scaled-1\.webp\'\)\] {
   background-image: url('https://minutodeaccion.com/wp-content/uploads/2025/09/hero-section-image-scaled-1.webp');
-}
-
-.bg-\[url\(\'https\:\/\/minutodeaccion\.com\/wp-content\/uploads\/2025\/09\/contact-1\.webp\'\)\] {
-  background-image: url('https://minutodeaccion.com/wp-content/uploads/2025/09/contact-1.webp');
 }
 
 .bg-\[url\(\'https\:\/\/minutodeaccion\.com\/wp-content\/uploads\/2025\/09\/news-letter-opt\.webp\'\)\] {
@@ -1369,6 +1337,10 @@ video {
   font-style: italic;
 }
 
+.leading-\[110\%\] {
+  line-height: 110%;
+}
+
 .leading-\[120\%\] {
   line-height: 120%;
 }
@@ -1379,10 +1351,6 @@ video {
 
 .leading-\[160\%\] {
   line-height: 160%;
-}
-
-.leading-\[110\%\] {
-  line-height: 110%;
 }
 
 .text-\[var\(--footer-cta-bg\)\] {

@@ -41,7 +41,7 @@
                                  );
                              
                              } else { ?>
-                                 <img class="block h-[221px] w-full object-cover rounded-t-lg " src="https://images.pexels.com/photos/32946430/pexels-photo-32946430/free-photo-of-silhouette-of-person-on-a-vibrant-beach-sunset.jpeg" alt="" loading="lazy">
+                                 <img class="block h-[221px] w-full object-cover rounded-t-lg " src="https://minutodeaccion.com/wp-content/uploads/2025/09/defaultMDA.avif" alt="" loading="lazy">
                              <?php } ?>
      
                              <div class="flex flex-col w-full px-5 pt-2 mx-auto text-left gap-y-2">
