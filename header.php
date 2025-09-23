@@ -19,7 +19,7 @@
     <div class="flex items-center justify-between py-4 px-5 lg:px-16 max-w-[1440px] mx-auto">
         <div class="flex items-center">
             <div> 
-                <a href="/" class="">
+                <a href="<?php esc_url(home_url('/')) ?>" class="">
                     <?php
                         if ( function_exists( 'the_custom_logo' ) ) {
                             the_custom_logo();
@@ -49,10 +49,10 @@
   <!-- Top bar -->
   <div class="flex items-center justify-between h-20 px-5">
     <div class="flex items-center">
-      <a href="/" class="">
+      <a href="<?php esc_url(home_url('/')) ?>" class="">
         <?php if ( function_exists('the_custom_logo') ) the_custom_logo(); ?>
       </a>
-      <a class="text-[var(--olive)] text-2xl font-medium ml-5" href="/">Minuto De Accion</a>
+      <a class="text-[var(--olive)] text-2xl font-medium ml-5" href="<?php esc_url(home_url('/')) ?>">Minuto De Accion</a>
     </div>
 
     <!-- Single toggle button -->
