@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php wp_head() ?> 
-    <meta name="description" content="Inspiring motivational stories, practical tips, and uplifting messages to help you stay positive and achieve your goals.">
-    <meta name="keywords" content="motivation, inspiration, personal growth, self improvement, positivity, success, lifestyle">
-    <script defer src="https://unpkg.com/alpinejs" ></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
     <style>[x-cloak] { display: none !important; }</style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-
+    <?php wp_head(); ?>
 </head>
 
-<body x-data="{ open: false, click: false, faqOpen1: false, faqOpen2: false, faqOpen3: false }">
+<body <?php body_class(); ?> x-data="{ open: false, click: false, faqOpen1: false, faqOpen2: false, faqOpen3: false }">
+    <?php wp_body_open(); ?>
     
 <!-- Desktop Navigation -->
 <nav id="desktopNav" class="sticky top-0 z-50 hidden md:block bg-[var(--main-bg)] shadow-md no-print">

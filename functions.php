@@ -163,3 +163,182 @@ add_action('wp_enqueue_scripts', function () {
 });
 
 
+// -----------------------------------------------------------------------------
+// Lightweight SEO helpers (skip if a dedicated SEO plugin is active)
+// -----------------------------------------------------------------------------
+
+function minuto_seo_is_third_party_active() {
+    return defined('WPSEO_VERSION')
+        || class_exists('The_SEO_Framework\Load')
+        || defined('RANK_MATH_VERSION');
+}
+
+function minuto_seo_get_description() {
+    if (is_singular()) {
+        $post = get_queried_object();
+
+        if (!$post instanceof WP_Post) {
+            return '';
+        }
+
+        if (has_excerpt($post)) {
+            $excerpt = get_the_excerpt($post);
+        } else {
+            $raw_content = strip_shortcodes($post->post_content);
+            $excerpt     = wp_trim_words(wp_strip_all_tags($raw_content), 28, '');
+        }
+
+        return sanitize_text_field($excerpt);
+    }
+
+    if (is_home() || is_front_page()) {
+        return get_bloginfo('description', 'display');
+    }
+
+    if (is_category() || is_tag() || is_tax()) {
+        $term = get_queried_object();
+        if ($term instanceof WP_Term && !empty($term->description)) {
+            return sanitize_text_field(wp_trim_words($term->description, 32, ''));
+        }
+        return sprintf(__('Artículos publicados en la categoría %s.', 'minuto-de-accion'), single_term_title('', false));
+    }
+
+    if (is_search()) {
+        return sprintf(__('Resultados de la búsqueda para "%s".', 'minuto-de-accion'), get_search_query());
+    }
+
+    if (is_404()) {
+        return __('La página solicitada no existe. Explora más contenido en Minuto de Acción.', 'minuto-de-accion');
+    }
+
+    return get_bloginfo('description', 'display');
+}
+
+function minuto_seo_get_image() {
+    if (is_singular() && has_post_thumbnail()) {
+        $image = get_the_post_thumbnail_url(null, 'full');
+        if ($image) {
+            return esc_url($image);
+        }
+    }
+
+    $custom_logo_id = get_theme_mod('custom_logo');
+    if ($custom_logo_id) {
+        $logo = wp_get_attachment_image_url($custom_logo_id, 'full');
+        if ($logo) {
+            return esc_url($logo);
+        }
+    }
+
+    $site_icon = get_site_icon_url(512);
+    if (!empty($site_icon)) {
+        return esc_url($site_icon);
+    }
+
+    return '';
+}
+
+function minuto_seo_get_canonical() {
+    $canonical = function_exists('wp_get_canonical_url') ? wp_get_canonical_url() : '';
+    if ($canonical) {
+        return esc_url($canonical);
+    }
+
+    global $wp;
+    if (isset($wp->request)) {
+        return esc_url(home_url(add_query_arg([], $wp->request)));
+    }
+
+    return esc_url(home_url('/'));
+}
+
+function minuto_seo_meta_tags() {
+    if (minuto_seo_is_third_party_active()) {
+        return;
+    }
+
+    $title       = wp_get_document_title();
+    $description = minuto_seo_get_description();
+    $canonical   = minuto_seo_get_canonical();
+    $image       = minuto_seo_get_image();
+    $site_name   = get_bloginfo('name');
+    $type        = (is_singular('post') || is_singular()) ? 'article' : 'website';
+
+    if (!empty($description)) {
+        printf("\n<meta name=\"description\" content=\"%s\" />\n", esc_attr($description));
+    }
+
+    if (!empty($canonical)) {
+        printf('<link rel="canonical" href="%s" />' . "\n", $canonical);
+    }
+
+    printf('<meta property="og:title" content="%s" />' . "\n", esc_attr($title));
+    if (!empty($description)) {
+        printf('<meta property="og:description" content="%s" />' . "\n", esc_attr($description));
+    }
+    printf('<meta property="og:url" content="%s" />' . "\n", $canonical);
+    printf('<meta property="og:site_name" content="%s" />' . "\n", esc_attr($site_name));
+    printf('<meta property="og:type" content="%s" />' . "\n", esc_attr($type));
+
+    if (!empty($image)) {
+        printf('<meta property="og:image" content="%s" />' . "\n", $image);
+    }
+
+    printf('<meta name="twitter:card" content="summary_large_image" />' . "\n");
+    printf('<meta name="twitter:title" content="%s" />' . "\n", esc_attr($title));
+    if (!empty($description)) {
+        printf('<meta name="twitter:description" content="%s" />' . "\n", esc_attr($description));
+    }
+    if (!empty($image)) {
+        printf('<meta name="twitter:image" content="%s" />' . "\n", $image);
+    }
+}
+add_action('wp_head', 'minuto_seo_meta_tags', 1);
+
+function minuto_seo_schema_markup() {
+    if (minuto_seo_is_third_party_active()) {
+        return;
+    }
+
+    $canonical   = minuto_seo_get_canonical();
+    $title       = wp_get_document_title();
+    $description = minuto_seo_get_description();
+    $image       = minuto_seo_get_image();
+    $site_name   = get_bloginfo('name');
+
+    $schema = [
+        '@context'    => 'https://schema.org',
+        '@type'       => is_singular('post') ? 'Article' : 'WebPage',
+        'headline'    => $title,
+        'name'        => $site_name,
+        'url'         => $canonical,
+        'description' => $description,
+    ];
+
+    if (!empty($image)) {
+        $schema['image'] = $image;
+    }
+
+    if (is_singular()) {
+        $schema['datePublished'] = get_the_date(DATE_W3C);
+        $schema['dateModified']  = get_the_modified_date(DATE_W3C);
+
+        $author_id = get_post_field('post_author', get_the_ID());
+        if ($author_id) {
+            $schema['author'] = [
+                '@type' => 'Person',
+                'name'  => get_the_author_meta('display_name', $author_id),
+            ];
+        }
+    } else {
+        $schema['isPartOf'] = [
+            '@type' => 'WebSite',
+            'name'  => $site_name,
+            'url'   => esc_url(home_url('/')),
+        ];
+    }
+
+    echo '<script type="application/ld+json">' . wp_json_encode($schema) . '</script>' . "\n";
+}
+add_action('wp_head', 'minuto_seo_schema_markup', 20);
+
