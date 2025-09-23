@@ -36,7 +36,7 @@
     <div class="max-w-[1312px] mx-auto border-b border-black"></div>
 
     <section class="pt-8 text-center">
-        <small class="lora">&copy; 2025 Minuto de Accion</small>
+        <small class="lora">&copy; <?php echo date_i18n('Y') ?> Minuto de Accion</small>
     </section>
     
     
