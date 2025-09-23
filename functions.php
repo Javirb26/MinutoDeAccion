@@ -162,11 +162,6 @@ add_action('wp_enqueue_scripts', function () {
   }
 });
 
-
-// -----------------------------------------------------------------------------
-// Lightweight SEO helpers (skip if a dedicated SEO plugin is active)
-// -----------------------------------------------------------------------------
-
 function minuto_seo_is_third_party_active() {
     return defined('WPSEO_VERSION')
         || class_exists('The_SEO_Framework\Load')
