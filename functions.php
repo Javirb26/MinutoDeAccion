@@ -233,6 +233,21 @@ function minuto_seo_get_image() {
     return '';
 }
 
+function minuto_seo_is_article_context() {
+    if (!is_singular()) {
+        return false;
+    }
+
+    $post_type = get_post_type();
+    if (!$post_type) {
+        return false;
+    }
+
+    $article_post_types = apply_filters('minuto_seo_article_post_types', ['post']);
+
+    return in_array($post_type, $article_post_types, true);
+}
+
 function minuto_seo_get_canonical() {
     $canonical = function_exists('wp_get_canonical_url') ? wp_get_canonical_url() : '';
     if ($canonical) {
@@ -240,12 +255,43 @@ function minuto_seo_get_canonical() {
     }
 
     global $wp;
+
     if (isset($wp->request)) {
-        return esc_url(home_url(add_query_arg([], $wp->request)));
+        $path          = ltrim((string) ($wp->request ?? ''), '/');
+        $canonical_url = trailingslashit(home_url($path));
+
+        $allowed_args = apply_filters('minuto_seo_canonical_allowed_query_vars', [
+            's',
+            'paged',
+            'page',
+            'author',
+            'cat',
+            'tag',
+            'post_type',
+        ]);
+
+        $sanitized_query = [];
+        foreach (wp_unslash($_GET) as $key => $value) {
+            if (in_array($key, $allowed_args, true) && $value !== '') {
+                $sanitized_query[$key] = is_array($value)
+                    ? array_map('sanitize_text_field', $value)
+                    : sanitize_text_field($value);
+            }
+        }
+
+        if (!empty($sanitized_query)) {
+            $query_string = http_build_query($sanitized_query);
+            if ($query_string) {
+                $canonical_url .= '?' . $query_string;
+            }
+        }
+
+        return esc_url($canonical_url);
     }
 
     return esc_url(home_url('/'));
 }
+
 
 function minuto_seo_meta_tags() {
     if (minuto_seo_is_third_party_active()) {
@@ -257,7 +303,7 @@ function minuto_seo_meta_tags() {
     $canonical   = minuto_seo_get_canonical();
     $image       = minuto_seo_get_image();
     $site_name   = get_bloginfo('name');
-    $type        = (is_singular('post') || is_singular()) ? 'article' : 'website';
+    $type        = minuto_seo_is_article_context() ? 'article' : 'website';
 
     if (!empty($description)) {
         printf("\n<meta name=\"description\" content=\"%s\" />\n", esc_attr($description));
@@ -303,7 +349,7 @@ function minuto_seo_schema_markup() {
 
     $schema = [
         '@context'    => 'https://schema.org',
-        '@type'       => is_singular('post') ? 'Article' : 'WebPage',
+        '@type'       => minuto_seo_is_article_context() ? 'Article' : 'WebPage',
         'headline'    => $title,
         'name'        => $site_name,
         'url'         => $canonical,
@@ -336,4 +382,3 @@ function minuto_seo_schema_markup() {
     echo '<script type="application/ld+json">' . wp_json_encode($schema) . '</script>' . "\n";
 }
 add_action('wp_head', 'minuto_seo_schema_markup', 20);
-
